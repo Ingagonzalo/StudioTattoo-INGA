@@ -415,7 +415,7 @@ html{
 .image_form img:first-of-type{ /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
     position: absolute;  
     width: 250px;
-    left: 30%;
+    left: 20%;
     top: 650px;
    
 }
@@ -423,7 +423,7 @@ html{
 .image_2_form{ /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
     position: absolute;  
     width: 250px;
-    left: 20%;
+    left: 15%;
     top: 450px;
    
 }
@@ -757,6 +757,13 @@ html{
         top: 43%;
         width: 80%;
     }
+
+    .home img:hover{
+        position: absolute;
+        top: 43%;
+        width: 80%;
+        
+    }
     /*FOOTER PREV */
     .footer_prev{ /*footer que quiero que desaparezca cuando aparece el footer principal*/
         display: none ; /* LO DESAPAREZCO HASTA QUE SEPA COMO HACERLO */
@@ -1083,6 +1090,13 @@ html{
     .home img{
         top: 42%;
         width: 80%;
+    }
+
+    .home img:hover{
+        position: absolute;
+        top: 46%;
+        width: 80%;
+        
     }
 
     /*FOOTER PREV */
