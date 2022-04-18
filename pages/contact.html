@@ -12,21 +12,26 @@
 </head>
 <body class="body_others">
     <header>
-        <nav class="navegation_other"> <!-- MENU DE NAVEGACION -->
-            <a href="../index.html"><img src="../images/logo_tittle_2.png" alt="Logo" width="100px"></a> <!-- HIPERVINCULO A HOME -->
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li> 
-                    <li><a href="./gallery.html">Galeria</a></li>
-                    <li><a href="./experience.html">Testimonios</a></li>
-                    <li><a href="./about.html">Sobre Nosotros</a></li>
-                    <li><a class="here" href="./contact.html">Contacto</a></li>
-                    <li><a href="./location.html">Localizacion</a></li>
-               </ul>
-           </nav>
+        <nav class="navegation_other">
+            <a href="../index.html"> <img src="../images/logo_tittle_2-white.png" alt=""></a>
+         <div class="nav_container">
+            <label for="menu" class="nav_label">
+                <img class="menu_responsive" src="../assets/menu.svg" alt="">
+            </label>
+            <input type="checkbox" id="menu" class="nav_input">
+            <div class="nav_menu_other">
+                <a href="../index.html" class="nav_item">Inicio</a>
+                <a href="./gallery.html" class="nav_item">Galeria</a>
+                <a href="./experience.html" class="nav_item">Testimonios</a>
+                <a href="./about.html" class="nav_item">Sobre Nosotros</a>
+                <a href="./contact.html" class="nav_item here">Contacto</a>
+                <a href="./location.html" class="nav_item">Localizacion</a>
+            </div>
+         </div>
+     </nav>
            <h1 class="tittle"> Contacto</h1> <!-- TITULO PRINCIPAL -->
     </header>
     <main class="main_form">
-        
         <section class="formulario"> <!-- FORMULARIO DE CONTACTO -->
             <div class="image_form">
                 <img class="image_1_form" src="../images/tatuador5.jpg" alt="">
@@ -47,8 +52,7 @@
                       <option value="consulta">Consulta</option>
                     </select>
                 <button id="sumbit_form" type="submit"> Enviar Consulta </button>
-            
-            </form>
+             </form>
         </section>
     </main>
     <footer>

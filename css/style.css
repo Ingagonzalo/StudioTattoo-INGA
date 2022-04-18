@@ -30,7 +30,7 @@ html{
 
 /* NAVEGACION INICIO */
 
-.navegation{
+.nav_menu{
     height: 100%;
     text-align: center;
     text-transform: uppercase ;
@@ -42,21 +42,26 @@ html{
     
 
 }
-.navegation li{
+.nav_menu li{
     display: inline-block;  
 }
-.navegation li a{
+.nav_menu li a{
     color: rgb(180, 180, 180);
     padding: 30px;
-     
+    transition: all .5s;
+         
 }
 
-.navegation li a:hover{
+.nav_menu li a:hover{
     color: white;
     border-bottom: 1px solid white;
     padding-bottom: 15px;
 }
 
+
+.nav_label, .nav_input{
+    display: none;
+}
 
 /* PAGINA DE INICIO */
 .home{
@@ -80,9 +85,19 @@ html{
 
 .home img{
     position: absolute;
-    top: 460px;
+    top: 46%;
     width: 800px;
     z-index: 9000;
+    transition: all 1s;
+    
+}
+
+.home img:hover{
+    position: absolute;
+    top: 46%;
+    width: 850px;
+    z-index: 9000;
+    transition: all 1s;
 
   
 }
@@ -142,7 +157,6 @@ html{
     align-items: center;
     padding: 30px;
     color: gray;
-  
     width: 100%;
     
 }
@@ -201,11 +215,11 @@ html{
     justify-content: space-between;
     align-items: center;
     text-transform: uppercase;
-    padding-right: 10%;
-    padding-left: 10%;
+    padding-right: 5%;
+    padding-left: 5%;
 
 } 
-.navegation_other ul{ /* propiedades del ul del menu de navegacion de las otras paginas */
+.nav_menu_other{ /* propiedades del ul del menu de navegacion de las otras paginas */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -217,21 +231,22 @@ html{
     
 }
 
-.navegation_other ul a{ /* propiedades de los hipervinculos del other-menu */
+.nav_menu_other a{ /* propiedades de los hipervinculos del other-menu */
       padding: 20px;
       color:rgb(187, 187, 187);
       font-weight: bold;
+      transition: all 1s;
 }
 
-.navegation_other ul a:hover{
+.nav_menu_other a:hover{
     color: white;
     border-bottom: 1px solid white;
-    padding-bottom: 15px;
+   
 
 }
 
 .navegation_other a img{
-    width: 250px;
+    width: 200px;
 }
 
 /*TITULO PRINCIPAL DE TODAS LAS PAGINAS MENOS DEL HOME*/
@@ -253,26 +268,14 @@ html{
 /*PROPIEDAD QUE ME INDICA EN QUE PAGINA ESTOY EN ESE MOMENTO, EN EL NAVBAR */
 .here{ 
     color: white !important;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
-
-/*GALERIA */
-
-/*.gallery{ /*defino el contenedor de la galeria 
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: 20px 25% 70px 25%;
-    justify-content: space-around; /*averiguar como hacer para los margenes sean todos iguales  
-}*/
 
 
 .container_grid{
     display: grid; 
- 
     grid-template-rows: repeat(3,300px); /*defino las filas*/
     grid-template-columns: repeat(3,300px); /*defino las columnas*/
-    
     grid-template-areas:
     "section_0 section_0 section_4"
     "section_2 section_3 section_4"
@@ -280,8 +283,7 @@ html{
     ;
     justify-content: center;
     gap: 10px;
-    height: 100vh;
-    margin: 0 auto;
+    margin: 50px;
  }
 
  
@@ -290,6 +292,7 @@ html{
     object-fit: cover;
     width: 100%;
     height: 100%;
+    
     
 }
 
@@ -331,10 +334,62 @@ html{
     grid-area: section_5;
 }
 
+.container_grid div a{
+    transition: all .5s;
+}
+
 .container_grid div a:hover{ /*Le agrego un filtro de blanco y negro al hover de las imageres */
     filter: grayscale(1);
     
 }
+
+.more_insta{
+    width: 100%;
+    height: 150px;
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid rgb(0, 0, 0,0.3);
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.048) 60%, rgb(173, 173, 173) 100%);
+
+}
+
+.more_insta a{
+    color: black;
+}
+.more_insta h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    transition: all 2s;
+ 
+}
+
+/*.more_insta h3 strong{
+   /*Lugar reservado para cambiar la tipografia 
+}*/
+
+.more_insta img{
+    width: 200px;
+    position: absolute;
+    z-index: -1;
+    left: 20%;
+    bottom: -700px;
+    transform: rotate(20deg); 
+
+    
+}
+
+.more_insta h3:hover {
+    font-size: 3rem;
+   
+}
+
+
 
 
 /*CONTACTOS */
@@ -548,6 +603,39 @@ html{
 
 /*lOCALIZACION */
 
+
+.travel_container{
+    display: grid; 
+ 
+    grid-template-rows: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    
+    grid-template-areas: 
+     'section_0 section_1 section_1 section_1 .'
+     'section_0 section_1 section_1 section_1 .'
+     '. . . . .';
+    
+    gap: 50px;
+    height: 100%;
+    margin: 20px 100px 20px 100px;
+    
+ }
+   
+.travel {
+    grid-area: section_0 ;
+}
+
+
+.map_container{
+ 
+    grid-area: section_1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .location div h2{
     text-align: center;
     font-size: 3.5rem;
@@ -556,30 +644,118 @@ html{
     font-family: 'Merriweather Sans', sans-serif; 
 }
 
-.map{
-    margin: 0 13.5%;
-    width: 70%;
+.map{ 
+    width: 100%;
 }
 
 .travel ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
     padding: 0;
     margin-bottom: 50px;
+    height: 80%;
 }
 
 .travel ul li{
+    margin: 20px;
     font-size: 2rem;
 }
 
-@media screen and (max-width: 400px){
+
+@media screen and (max-width: 480px){
+
+
+    .navegation_other{
+        
+       width: 100%;
+      
+    }
+
+/*MENU HAMBURGUESA */
+
+
+    .menu_responsive{ /* PROPIEDADES DEL ICONO DE MENU DESPLEGABLE */
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        width: 40px;
+    }
+
+
+    .nav_label{ /* PROPIEDADES DEL LABEL DE MENU DESPLEGABLE */
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav_menu, .nav_menu_other{ /* PROPIEDADES DEL MENU DESPLEGABLE */
+        
+        position: absolute;
+        top: 75px;
+        right: 0px;
+        bottom: 0;
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        transition: clip-path .5s ease-in-out;
+        z-index: 90000;
+       
+
+    }
+
+    .nav_menu ul{
+        padding: 0;
+    }
+    
+    .nav_menu ul li{
+        margin-top: 30px;
+        margin-left: 50px;
+        margin-right: 50px;
+       
+    }
+
+    .nav_input:checked + .nav_menu, .nav_input:checked + .nav_menu_other{ /* PROPIEDADES PARA QUE FUNCIONE EL MENU */
+        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    }
+
+
+    .nav_menu li a:hover{
+        color: black;
+        border-bottom: 3px solid gray;
+        padding-bottom: 15px;
+    }
+
+
+
+
+    .nav_menu_other a:hover{
+        color: white;
+        border-bottom: 1px solid white;
+        padding-bottom: 20px;
+    }
+    
+    .navegation_other a img{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 170px;
+    }
+
 
   /*HOME INDEX */
+
     .home video{
-        height: 70vh;
+        margin-top: 65px;
+        height: 79vh;
     }
     .home img{
-         top: 430px;
-         width: 300px;
+        top: 43%;
+        width: 80%;
     }
     /*FOOTER PREV */
     .footer_prev{ /*footer que quiero que desaparezca cuando aparece el footer principal*/
@@ -590,6 +766,7 @@ html{
     /*FOOTER PRINC. */
     .footer_bottom{ /*contenedor del footer principal */
         padding: 10px;
+        width: 100%;
         
     }
    
@@ -616,8 +793,10 @@ html{
 
 
     .tittle{ 
-        padding: 10px;
+        padding: 20px;
         font-size: 3rem;
+        
+        
     }
 
     .navegation_other li{ /* contenedor del menu de navegacion de las otras paginas */
@@ -625,85 +804,89 @@ html{
     
     } 
 
+    /*FORMULARIO VISTA MOBILE */
+
     .main_form{
         margin: 0;
-        
-       
+        height: 65vh;
     }
-    
+            
     .formulario{ /*defino las propiedades del contenedor de todo el "main" */
-        margin-top: 92px;
-        margin-bottom: 92px;
+        margin-top: 120px;
         justify-content: center;
-        width: 100%;
+        width: 100%;    
+                   
     }
-    
+            
     .image_form img:first-of-type{ /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
-       display: none;
-       
-    }
-    
+        display: none;  
+    }        
+            
     .image_2_form{ /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
         display: none;
-       
-    }
-    
-
+    }        
+            
     .form_contacts{ /*defino las propiedades del contenedor del formulario" */
-        width: 90%;
+        width: 80%;
         display: flex;
         flex-direction: column;
-       
-    }
-      
-      
+
+    }    
+            
     #conjunto_form{ /*defino las propiedades del contenedor del mail y el phone" */
         display: flex;
         justify-content: space-between;
-    }
-      
+    }        
+            
     #email_form{ /*defino el ancho del mail" */
-          width: 45%;
-    }
-    
+        width: 45%;
+    }        
+            
     #phone_form{ /*defino el ancho del phone" */
         width: 45%;
-    }
-      
-    
+    }        
+            
     .form_parts{ /*defino el contenedor del text_area" */
         margin-bottom: 20px;
         padding: 12px;
         border: 2px solid rgb(81 , 81, 81);
-    }
-      
+    }        
+            
     #sumbit_form{ /*propiedades del boton" */
         padding: 12px;
         background-color: black;
         color: white;
-    }
+    }  
+    
+    /*GALERIA VISTA MOBILE */
 
     .container_grid{
         display: grid; 
      
-        grid-template-rows: repeat(3,170px); /*defino las filas*/
-        grid-template-columns: repeat(2,170px); /*defino las columnas*/
+        grid-template-rows: repeat(6,.8fr); /*defino las filas*/
+        grid-template-columns: repeat(1,.8fr); /*defino las columnas*/
         
         grid-template-areas:
-        "section_0 section_1"
-        "section_2 section_3"
-        "section_4 section_5"
-       
-        
+        "section_0"
+        "section_1"
+        "section_2"
+        "section_3"
+        "section_4"
+        "section_5"
         ;
-        justify-content: center;
+
         gap: 10px;
         height: 100%;
-        margin: 12% auto;
+        margin: 50px 25px 50px 25px;
+        
     }
 
+    .more_insta{
+        display: none;
+    }
 
-      
+    /*TESTIMONIOS VISTA MOBILE */
+
     .review_container{  /* propiedades testimonios contenedor */
         width: 100%;
     }
@@ -728,7 +911,8 @@ html{
 
     .info div p{
         margin-top: 30px;
-        margin-bottom: 30px;      
+        margin-bottom: 30px; 
+        width: 100%;     
     }
     
     .info div img{
@@ -767,4 +951,346 @@ html{
         right:  20px;
         width: 50px;
     }
+
+
+    /*LOCALIZACION RESPONSIVE */
+
+
+    .travel_container{
+        display: grid; 
+     
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr ;
+        
+        grid-template-areas:
+        "section_1 section_1"
+        "section_0 section_0"
+        ;
+
+        margin: 10px;
+        
+     }
+       
+    .travel {
+        grid-area: section_0 ;
+    }
+    
+    
+    .map_container{
+        grid-area: section_1;
+    }
+    
+    
+    .location div h2{
+        font-size: 3rem;
+    }
+    
+
+    
+    .travel ul{
+        height: 70%;
+    }
+    
+    .travel ul li{
+        margin: 10px;
+    }  
 }
+
+
+    
+@media screen and (min-width: 480px) and (max-width: 992px){ /*VISTA TABLET */
+/*MENU HAMBURGUESA */
+    
+    .menu_responsive{ /* PROPIEDADES DEL ICONO DE MENU DESPLEGABLE */
+        position: absolute;
+        right: 60px;
+        top: 20px;
+        width: 50px;
+    }
+
+
+    .nav_label{ /* PROPIEDADES DEL LABEL DE MENU DESPLEGABLE */
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav_menu, .nav_menu_other{ /* PROPIEDADES DEL MENU DESPLEGABLE */
+        
+        position: absolute;
+        top: 95px;
+        right: 0px;
+        bottom: 0;
+        width: 450px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: black;
+        align-items: flex-start;
+        padding: 30px;
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        transition: clip-path .5s ease-in-out;
+        
+
+    }
+
+    .nav_menu ul{
+        padding: 0;
+    }
+
+    .nav_menu ul li{
+        margin: 20px;
+    }
+
+    .nav_input:checked + .nav_menu, .nav_input:checked + .nav_menu_other{ /* PROPIEDADES PARA QUE FUNCIONE EL MENU */
+        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    }
+
+
+    .nav_menu li a:hover{
+        color: black;
+        border-bottom: 3px solid gray;
+        padding-bottom: 15px;
+    }
+
+    .nav_menu_other{ /* propiedades del ul del menu de navegacion de las otras paginas */
+        
+    }
+
+    .nav_menu_other a{ /* propiedades de la fuente del menu desplegable */
+        font-size: 15px;
+    }
+    
+    .nav_menu_other a:hover{
+        color: white;
+        border-bottom: 1px solid white;
+        padding-bottom: 20px;
+    }
+
+    .navegation_other a img{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 250px;
+    }
+
+
+
+    .home video{
+        margin-top: 90px;
+        height: 79vh;
+    }
+
+    .home img{
+        top: 42%;
+        width: 80%;
+    }
+
+    /*FOOTER PREV */
+    .footer_prev{ /*footer que quiero que desaparezca cuando aparece el footer principal*/
+        display: none ; /* LO DESAPAREZCO HASTA QUE SEPA COMO HACERLO */
+
+    }
+
+    /*FOOTER PRINC. */
+    .footer_bottom{ /*contenedor del footer principal */
+        padding: 30px;
+        
+        
+    }
+
+    .redes ul a{ /*propiedades de los hipervinculos */
+        padding: 30px;
+        font-size: 3.5rem;
+        color: white;
+    }
+    
+
+    .logo_footer img{ /*logo principal de las redes */
+        display: none;
+        
+    }
+    
+    .copyright { /* propiedades de la informacion legal */
+        font-size: 1.7rem;
+        text-align: center;
+    }
+    
+    .info_footer a{
+        display: none;
+    }
+
+
+    /*GALERIA VISTA TABLET */
+
+    .container_grid{
+        display: grid; 
+    
+        grid-template-rows: repeat(3,1fr); /*defino las filas*/
+        grid-template-columns: repeat(3,1fr); /*defino las columnas*/
+        grid-template-areas:
+        "section_0 section_0 section_4"
+        "section_2 section_3 section_4"
+        "section_1 section_3 section_5"
+        ;
+        /*TENGO UN ESPACIO EN BLANCO ENTRE LA GRILLA Y EL FOOTER, ENCONTRAR ALGUNA SOLUCION */
+        gap: 10px;
+        height: 100%;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .more_insta{
+        display: none;
+    }
+
+    /*TESTIMONIOS VISTA TABLET */
+
+    .review_box {
+        width: 500px;
+        box-shadow: 2px 2px 15px rgb(0 0 0 / 50%);
+        background-color: white;
+        padding: 20px;
+        margin: 0px;
+        margin-right: 0px; 
+        margin-bottom: 70px;
+    }
+
+    .image_info{
+        margin-bottom: 50px;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+        
+    }
+
+    .experience_info img{
+        margin: 20px;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .experience_info p{
+        
+        width: 100%;
+    }
+
+    .info {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .image_info {
+
+        margin-top: 5px;
+    }
+
+    /*FORMULARIO VISTA TABLET */
+
+    .main_form{
+        margin: 0;
+    }
+            
+    .formulario{ /*defino las propiedades del contenedor de todo el "main" */
+        margin-top: 92px;
+        margin-bottom: 92px;
+        justify-content: center;
+        width: 100%;    
+        height: 46vh;            
+    }
+            
+    .image_form img:first-of-type{ /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
+        display: none;  
+    }        
+            
+    .image_2_form{ /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
+        display: none;
+    }        
+            
+    .form_contacts{ /*defino las propiedades del contenedor del formulario" */
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+
+    }    
+            
+    #conjunto_form{ /*defino las propiedades del contenedor del mail y el phone" */
+        display: flex;
+        justify-content: space-between;
+    }        
+            
+    #email_form{ /*defino el ancho del mail" */
+        width: 45%;
+    }        
+            
+    #phone_form{ /*defino el ancho del phone" */
+        width: 45%;
+    }        
+            
+    .form_parts{ /*defino el contenedor del text_area" */
+        margin-bottom: 20px;
+        padding: 12px;
+        border: 2px solid rgb(81 , 81, 81);
+    }        
+            
+    #sumbit_form{ /*propiedades del boton" */
+        padding: 12px;
+        background-color: black;
+        color: white;
+    }       
+            
+            
+            
+
+        /*LOCALIZACION RESPONSIVE MOBILE/TABLET */
+
+
+    .travel_container{
+        display: grid; 
+    
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr ;
+        
+        grid-template-areas:
+        "section_1 section_1"
+        "section_0 section_0"
+        ;
+
+        margin: 10px;
+        
+    }
+    
+    .travel {
+        grid-area: section_0 ;
+    }
+
+
+    .map_container{
+        grid-area: section_1;
+    }
+
+
+    .location div h2{
+        font-size: 3rem;
+    }
+
+
+
+    .travel ul{
+        height: 70%;
+    }
+
+    .travel ul li{
+        margin: 10px;
+    }       
+    
+        
+    
+        
+}
+    
+
+

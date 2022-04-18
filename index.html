@@ -12,35 +12,31 @@
 </head>
 <body class="body_index">
     <header>
-        <nav class="navegation"> <!-- MENU DE NAVEGACION -->
-            <ul>
-               
-                <li><a href="./pages/gallery.html">Galeria</a></li>
-                <li><a href="./pages/experience.html">Testimonios</a></li>
-                <li><a href="./pages/about.html">Sobre Nosotros</a></li>
-                <li><a href="./pages/contact.html">Contacto</a></li>
-                <li><a href="./pages/location.html">Localizacion</a></li>
-            </ul>
-            <label for="" class="nav_label">
-                <img src="./assets/menu.svg" alt="" class="nav_img">
-            </label>
-            <input type="checkbox" id="menu">
+        <nav class="nav">
+            <div class="nav_container">
+                <label for="menu" class="nav_label">
+                    <img class="menu_responsive" src="./assets/menu.svg" alt="">
+                </label>
+                <input type="checkbox" id="menu" class="nav_input">
+                <div class="nav_menu">
+                    <ul>
+                        <li><a class="nav_item" href="./pages/gallery.html">Galeria</a></li>
+                        <li><a class="nav_item" href="./pages/experience.html">Testimonios</a></li>
+                        <li><a class="nav_item" href="./pages/about.html">Sobre Nosotros</a></li>
+                        <li><a class="nav_item" href="./pages/contact.html">Contacto</a></li>
+                        <li><a class="nav_item" href="./pages/location.html">Localizacion</a></li>
+                    </ul>
+                </div>
+                
+            </div>
         </nav>
-        
-    
     </header>
     <main>
-        <section class="home"> <!-- VISTA PRINCIPAL -->
-            <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/03KDZvvTqVU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-           
+        <section class="home"> 
             <video id="video_fondo" src="./images/video_bg.webm" autoplay muted loop></video>
-            <img src="./images/logo_tittle_2.png" alt="logoStudio">
-            <!--<img src="./images/logo_prov.png" alt="LogoStudio" >
-            <h2>TATTO STUDIO</h2>-->
+            <img src="./images/logo_tittle_2.png" alt="logoStudio">  
         </section>
-    
     </main>
-    
     <footer>
         <!-- FOOTER PREVIO QUE SE OCULTA AL LLEGAR A FOOTER PRINC. -->
         <section class="footer_prev"> 
