@@ -39,29 +39,27 @@ html{
     border-bottom: 2px solid rgb(128, 128, 128,0.5);
     font-size: 1.3rem;
     font-weight: bold;
-    
-
 }
-.nav_menu li{
-    display: inline-block;  
-}
-.nav_menu li a{
-    color: rgb(180, 180, 180);
-    padding: 30px;
-    transition: all .5s;
-         
-}
-
-.nav_menu li a:hover{
-    color: white;
-    border-bottom: 1px solid white;
-    padding-bottom: 15px;
-}
-
 
 .nav_label, .nav_input{
     display: none;
 }
+
+
+.nav_menu a{ /* propiedades de los hipervinculos del other-menu */
+      padding: 20px;
+      color:rgb(187, 187, 187);
+      font-weight: bold;
+      transition: all 1s;
+}
+
+.nav_menu a:hover{
+    color: white;
+    border-bottom: 1px solid white;
+   
+
+}
+
 
 /* PAGINA DE INICIO */
 .home{
@@ -705,31 +703,18 @@ html{
         clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
         transition: clip-path .5s ease-in-out;
         z-index: 90000;
-       
+        font-size: 1.5rem;
 
     }
 
-    .nav_menu ul{
-        padding: 0;
-    }
-    
-    .nav_menu ul li{
-        margin-top: 30px;
-        margin-left: 50px;
-        margin-right: 50px;
-       
-    }
+
 
     .nav_input:checked + .nav_menu, .nav_input:checked + .nav_menu_other{ /* PROPIEDADES PARA QUE FUNCIONE EL MENU */
         clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
     }
 
 
-    .nav_menu li a:hover{
-        color: black;
-        border-bottom: 3px solid gray;
-        padding-bottom: 15px;
-    }
+    
 
 
 
@@ -1037,37 +1022,17 @@ html{
         padding: 30px;
         clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
         transition: clip-path .5s ease-in-out;
+        z-index: 100000;
+        font-size: 1.5rem;
         
 
     }
 
-    .nav_menu ul{
-        padding: 0;
-    }
-
-    .nav_menu ul li{
-        margin: 20px;
-    }
 
     .nav_input:checked + .nav_menu, .nav_input:checked + .nav_menu_other{ /* PROPIEDADES PARA QUE FUNCIONE EL MENU */
         clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
     }
 
-
-    .nav_menu li a:hover{
-        color: black;
-        border-bottom: 3px solid gray;
-        padding-bottom: 15px;
-    }
-
-    .nav_menu_other{ /* propiedades del ul del menu de navegacion de las otras paginas */
-        
-    }
-
-    .nav_menu_other a{ /* propiedades de la fuente del menu desplegable */
-        font-size: 15px;
-    }
-    
     .nav_menu_other a:hover{
         color: white;
         border-bottom: 1px solid white;
