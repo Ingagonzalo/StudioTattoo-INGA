@@ -226,6 +226,7 @@ html{
     font-size: 1.3rem;
     padding-top: 30px;
     padding-bottom: 30px;
+    
    
     
 }
@@ -235,6 +236,7 @@ html{
       color:rgb(187, 187, 187);
       font-weight: bold;
       transition: all 1s;
+      text-decoration: none;
 }
 
 .nav_menu_other a:hover{
@@ -468,11 +470,8 @@ html{
 
 
 .review{  /*section contenedor" */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
+    margin-bottom: 70px;
+    margin-top: 70px;
 }
   
 .review_container{  /* propiedades testimonios contenedor */
@@ -480,8 +479,7 @@ html{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 80%;
-    padding: 20px;
+
 }
   
 .review_box{ /* propiedades contenedor */
@@ -489,9 +487,9 @@ html{
     box-shadow: 2px 2px 15px rgb(0, 0, 0,0.5);
     background-color: white;
     padding: 20px;
-    margin: 20px;
-    margin-right: 70px;
     margin-bottom: 70px;
+
+
 }
 
 .box_top{ /* section de la parte superior del testimonio  */
