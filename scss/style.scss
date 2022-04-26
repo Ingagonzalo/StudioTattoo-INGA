@@ -1,0 +1,1135 @@
+$colorborde: rgb(110,110,100);
+$colorbordeshadow: rgba(110, 110, 110, 0.5);
+$white: rgb(220, 220, 220);
+$bgfooter: rgb(39, 39, 39);
+$bgblack:rgb(18 , 18, 18);
+$gray: rgb(115,115,115);
+$textonav:rgb(180, 180, 180);
+$copywhite: rgb(245,245,245);
+$black: rgb(5,5,5);
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@600&display=swap');
+
+html{
+    font-size: 62.5%;
+}
+
+*{
+    box-sizing: border-box;
+    text-decoration: none ;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.body_index{ /* body del index */
+    background-image: url(../images/Tattoo-Fondo.jpg);
+    
+}
+
+.nav_menu {
+    height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid $colorbordeshadow;
+    font-size: 1.3rem;
+    font-weight: bold;
+  
+    a {
+      color:$textonav;
+      padding: 30px;
+      transition: all .5s;
+  
+      &:hover {
+          
+        color: $white;
+        border-bottom: 1px solid $white;
+        padding-bottom: 15px;
+      }
+    }
+}
+
+.nav_label, .nav_input{
+    display: none;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    position: static;
+    margin-bottom: 5%;
+
+    video{
+        object-fit: cover;
+        width: 95vw;
+        height: 80vh;
+        margin: 1% 0% 1% 0%;
+        z-index: -1;
+        padding:1% 1% 1% 1% ;
+        border: 2px solid $colorbordeshadow;
+    }
+    img{
+        position: absolute;
+        top: 46%;
+        width: 800px;
+        z-index: 90;
+        transition: all 1s;
+        &:hover{
+            position: absolute;
+            top: 46%;
+            width: 850px;
+            z-index: 9000;
+            transition: all 1s;
+        }
+    }
+
+   
+}
+
+.footer_bottom{ /*contenedor del footer principal */
+    border-top: 2px solid $colorborde;
+    border-bottom: 2px solid $colorborde;
+    background-color: $bgfooter;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    width: 100%;
+    
+    
+}
+
+.footer_bottom_redes{
+    ul{ /*propiedades del ul de las redes */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 0;
+    }
+    a{
+        padding: 40px;
+        font-size: 3rem;
+        color: $gray;
+        &:hover{
+            color: $white;
+        }
+    }
+
+}
+
+.footer_bottom_logo {
+    img{ /*logo principal de las redes */
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    }
+    
+}
+
+.footer_bottom_copyright { /* propiedades de la informacion legal */
+    margin-bottom:5px ;
+    font-size: 1.5rem;
+    color: $copywhite;
+    
+}
+
+.footer_bottom_info{
+    a{
+    text-decoration: underline;
+    color: whitesmoke;
+    font-size: 1.3rem;
+    }
+    &:first-of-type{
+        padding-right: 5px;
+        border-right: 2px solid $gray;
+    }
+
+}
+
+.footer_prev{ /*footer que quiero que desaparezca cuando aparece el footer principal*/
+    display: none ; /* LO DESAPAREZCO HASTA QUE SEPA COMO HACERLO */
+}
+
+/* MENU DE NAVEGACION DE LAS OTRAS PAGINAS */
+
+.navegation_other{ /* contenedor del menu de navegacion de las otras paginas */
+    background-color: $bgblack;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    padding-right: 5%;
+    padding-left: 5%;
+    img{
+        width: 200px;
+    }
+
+} 
+
+.nav_menu_other{ /* propiedades del ul del menu de navegacion de las otras paginas */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    a{
+        padding: 20px;
+        color:$gray;
+        font-weight: bold;
+        transition: all 1s;
+        text-decoration: none; 
+        &:hover{
+            color: $white;
+            border-bottom: 1px solid $white;
+        }
+    }
+}
+
+/*TITULO PRINCIPAL DE TODAS LAS PAGINAS MENOS DEL HOME*/
+
+.tittle{ 
+    padding: 80px;
+    color: $white;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    background-color: $black;
+    margin-top: 0;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 5px;
+    font-size: 4rem;
+}
+
+/*PROPIEDAD QUE ME INDICA EN QUE PAGINA ESTOY EN ESE MOMENTO, EN EL NAVBAR */
+.here{ 
+    color: $white !important;
+    font-size: 1.4rem;
+}
+
+
+/*GALERIA */
+.container_grid_gallery{
+    display: grid; 
+    grid-template-rows: repeat(3,300px); /*defino las filas*/
+    grid-template-columns: repeat(3,300px); /*defino las columnas*/
+    grid-template-areas:
+    "section_0 section_0 section_4"
+    "section_2 section_3 section_4"
+    "section_1 section_3 section_5"
+    ;
+    justify-content: center;
+    gap: 10px;
+    margin: 50px;
+    div{
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        a{
+            transition: all .5s;
+            &:hover{    /*Le agrego un filtro de blanco y negro al hover de las imageres */
+                filter: grayscale(1);
+            }
+        }
+    }
+ }
+
+#image_0{
+    /*Le asigno una grid area a las imagenes*/
+   grid-area: section_0;
+   
+}
+
+#image_1 {
+   grid-area: section_1;
+}
+
+#image_1 img {
+   object-position: bottom;  /*se lo coloco para tener una imagen clara de lo que quiero ver*/
+}
+
+#image_2 {
+   grid-area: section_2;
+}
+
+#image_2 img {
+   object-position: bottom;
+}
+
+#image_3{
+   grid-area: section_3;
+}
+
+#image_4{ 
+   grid-area: section_4;
+}
+
+#image_4 img {
+   object-position: left;
+}
+
+#image_5{
+   grid-area: section_5;
+}
+
+
+.more_insta{
+    width: 100%;
+    height: 150px;
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid $colorbordeshadow;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.048) 60%, rgb(173, 173, 173) 100%);
+    a{
+        color: black;
+    }
+    h3{
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 700;
+        transition: all 2s;
+        &:hover{
+            font-size: 3rem;
+        }
+    }
+    img{
+        display: none; /*Lo escondo hasta que sepa como realizar la animacion que quiero */
+        width: 200px;
+        position: absolute;
+        z-index: -1;
+        left: 20%;
+        bottom: -700px;
+        transform: rotate(20deg); 
+    }
+}
+
+/*.more_insta h3 strong{
+   /*Lugar reservado para cambiar la tipografia 
+}*/
+
+/*CONTACTOS */
+
+.main_form{
+    margin-left: 10%;
+}
+
+.form_container{ /*defino las propiedades del contenedor de todo el "main" */
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 200px;
+    margin-top: 200px;
+}
+
+.form_contacts{ /*defino las propiedades del contenedor del formulario" */
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+#conjunto_form{ /*defino las propiedades del contenedor del mail y el phone" */
+    display: flex;
+    justify-content: space-between;
+}
+  
+#email_form{ /*defino el ancho del mail" */
+      width: 45%;
+}
+
+#phone_form{ /*defino el ancho del phone" */
+    width: 45%;
+}
+  
+
+.form_parts{ /*defino el contenedor del text_area" */
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 2px solid rgb(81 , 81, 81);
+}
+  
+#sumbit_form{ /*propiedades del boton" */
+    padding: 12px;
+    background-color: black;
+    color: white;
+}
+
+.form_images{ 
+    img{
+        &:first-of-type{ /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
+            position: absolute;  
+            width: 250px;
+            left: 30%;
+            top: 650px;
+            }
+    }
+    
+}
+
+.form_images_2{ /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
+    position: absolute;  
+    width: 250px;
+    left: 20%;
+    top: 450px;
+}
+
+/*RESENAS */
+
+.review{  /*section contenedor" */
+    margin-bottom: 70px;
+    margin-top: 70px;
+}
+
+.review_container{  /* propiedades testimonios contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.review_box{ /* propiedades contenedor */
+    width: 500px;
+    box-shadow: 2px 2px 15px $colorborde;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 70px;
+}
+
+.box_top{ /* section de la parte superior del testimonio  */
+    margin-bottom: 20px;
+}
+
+.profile{ /* section del perfil */
+    display: flex;
+    align-items: center;
+}
+  
+.profile_image{ /* contenedor de la imagen del perfil */
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 30px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+        object-position: top;
+    }
+    
+}
+
+.name_user{ /* Nombre de la persona */
+    display: flex;
+    flex-direction: column;
+    strong{
+        color: $gray;
+        font-size: 1.4rem;
+        margin-bottom: 4px;
+    }
+    span{
+        color: $gray;
+        font-size: 1.2rem;
+    }
+}
+
+.comentarios_contenedor p{
+    font-size: 1.3rem;
+}
+
+/*ABOUT US */
+
+.info{
+    text-align: center;
+    width: 70%;
+    margin: 0px auto;
+    div{
+        p{
+            font-size: 2rem;
+            margin-top: 50px;
+        }
+        h2{
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            margin-top: 100px;
+            font-family: 'Merriweather Sans', sans-serif;
+        }
+        img{
+            margin-top: 50px;   
+        }
+    }
+}
+
+.info_about_us_image{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.images_info{
+    margin-bottom: 50px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+ 
+}
+
+.image_info_experience{
+    
+    img{
+        margin: 20px;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    p{
+        width: 300px;
+    }
+}
+
+.up{
+    img{
+        position: fixed;
+        bottom: 20px;
+        right:  20px;
+        width: 100px;
+    }
+}
+
+/*lOCALIZACION */
+
+.location_travel_container{
+    display: grid; 
+    grid-template-rows: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-areas: 
+     'section_0 section_1 section_1 section_1 .'
+     'section_0 section_1 section_1 section_1 .'
+     '. . . . .';
+    gap: 50px;
+    height: 100%;
+    margin: 20px 100px 20px 100px;
+    
+}
+
+.travel {
+    grid-area: section_0 ;
+    ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 50px;
+        height: 80%;
+        li{
+            margin: 20px;
+            font-size: 2rem; 
+            
+        }
+    }
+}
+
+.location_map_container{
+    grid-area: section_1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.location{
+    div{
+        h2{
+            text-align: center;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            margin-top: 50px;
+            font-family: 'Merriweather Sans', sans-serif; 
+        }
+    }
+}
+
+.location_map{ 
+    width: 100%;
+}
+
+.material-symbols-outlined{
+    font-size: 30px;
+}
+
+@media screen and (max-width: 480px){
+
+    
+    /*MENU HAMBURGUESA */
+
+    .menu_responsive{ /* PROPIEDADES DEL ICONO DE MENU DESPLEGABLE */
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        width: 40px;
+
+    }
+
+    .nav_label{/* PROPIEDADES DEL LABEL DE MENU DESPLEGABLE */
+        display: block;
+        cursor: pointer;
+        img{
+            position: absolute; /* PROPIEDADES DEL ICONO DE MENU DESPLEGABLE */
+            right: 20px;
+            top: 20px;
+            width: 40px;
+        }
+    }
+
+    .nav_menu, .nav_menu_other{ /* PROPIEDADES DEL MENU DESPLEGABLE */
+        position: absolute;
+        top: 75px;
+        right: 0px;
+        bottom: 0;
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        transition: clip-path .5s ease-in-out;
+        z-index: 90000;
+    }
+
+    .nav_menu, .nav_menu_other{
+
+            a{
+                padding: 10px;
+                &:hover{
+                    color: $black;
+                    border-bottom: 3px solid $gray;
+                    padding-bottom: 15px;
+                }
+            }
+    }
+
+    .nav_input:checked + .nav_menu, .nav_input:checked + .nav_menu_other{ /* PROPIEDADES PARA QUE FUNCIONE EL MENU */
+        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    }
+    
+    .navegation_other{
+        width: 100%;
+        a{
+            &:hover{
+                color: $white;
+                border-bottom: 1px solid $white;
+                padding-bottom: 20px;
+            }
+            img{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                width: 170px;
+            }
+        }
+
+    }
+    
+     /*HOME INDEX */
+
+    .home{
+        video{
+            margin-top: 65px;
+            height: 79vh;
+        }
+        img{
+            top: 43%;
+            width: 80%;
+        }
+    }
+
+     /*FOOTER PREV */
+    
+     .footer_prev{ /*footer que quiero que desaparezca cuando aparece el footer principal*/
+        display: none ; /* LO DESAPAREZCO HASTA QUE SEPA COMO HACERLO */
+    }
+
+     /*FOOTER PRINC. */
+    .footer_bottom{ /*contenedor del footer principal */
+        padding: 10px;
+        width: 100%;
+        
+    }
+
+    .footer_bottom_redes{
+        ul{
+            a{
+                padding: 20px;
+                font-size: 2.5rem;
+                color: white;
+            }
+        }
+    }
+
+    .footer_bottom_logo{
+        img{ /*logo principal de las redes */
+            display: none;
+        } 
+    }
+
+    .footer_bottom_copyright { /* propiedades de la informacion legal */
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .footer_bottom_info {
+        a{
+            display: none;
+        }
+    }
+
+    .tittle{ 
+        padding: 20px;
+        font-size: 3rem;
+    }
+
+
+
+    /*FORMULARIO VISTA MOBILE */
+
+    .main_form{
+        margin: 0;
+        height: 65vh;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .form_container{ /*defino las propiedades del contenedor de todo el "main" */
+        margin: 0;
+        justify-content: center;
+        width: 100%;    
+    }
+
+    .form_images{
+        display: none;
+    }
+
+
+    .form_contacts{ /*defino las propiedades del contenedor del formulario" */
+        width: 80%;
+    }
+    
+    /*GALERIA VISTA MOBILE */
+
+    .container_grid_gallery{
+        display: grid; 
+     
+        grid-template-rows: repeat(6,.8fr); /*defino las filas*/
+        grid-template-columns: repeat(1,.8fr); /*defino las columnas*/
+        
+        grid-template-areas:
+        "section_0"
+        "section_1"
+        "section_2"
+        "section_3"
+        "section_4"
+        "section_5"
+        ;
+
+        gap: 10px;
+        height: 100%;
+        margin: 50px 25px 50px 25px;
+        
+    }
+
+    .more_insta{
+        display: none;
+    }
+
+    /*TESTIMONIOS VISTA MOBILE */
+
+    .review{  /* propiedades testimonios contenedor */
+        width: 80%;
+        margin: auto;
+        margin-top: 70px;
+        margin-bottom: 35px;
+    }
+
+
+
+    /*ABOUT US */
+
+
+    .info{
+        width: 80%;
+        div{
+            h2{
+                margin-top: 50px;
+                margin-bottom: 50px; 
+            }
+            p{
+                margin-top: 30px;
+                margin-bottom: 30px; 
+                width: 100%; 
+            }
+            img{
+                margin-top: 0;
+            }
+        }
+    }
+
+    .images_info{
+    flex-direction: column;
+    }
+
+
+    .image_info_experience{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: auto;
+            img{
+                margin: 0;
+            }
+            p{
+                    width: 80% !important;
+                    
+            }
+    }
+
+
+
+    .up {
+        img{
+            width: 50px;
+        }
+    }
+
+   /*LOCALIZACION RESPONSIVE */
+
+
+   .location_travel_container{
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-areas:
+    "section_1 section_1"
+    "section_0 section_0"
+    ;
+
+    margin: 10px;
+    
+    }
+
+    .travel{
+        ul{
+            height: 70%;
+            li{
+                margin: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 992px){ /*VISTA TABLET */
+
+    .nav_label{/* PROPIEDADES DEL LABEL DE MENU DESPLEGABLE */
+        display: block;
+        cursor: pointer;
+        img{
+            position: absolute; /* PROPIEDADES DEL ICONO DE MENU DESPLEGABLE */
+            right: 20px;
+            top: 20px;
+            width: 50px;
+        }
+
+
+    }
+
+
+
+    .nav_menu, .nav_menu_other{ /* PROPIEDADES DEL MENU DESPLEGABLE */
+        
+        position: absolute;
+        top: 95px;
+        right: 0px;
+        bottom: 0;
+        width: 450px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: black;
+        align-items: flex-start;
+        padding: 30px;
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        transition: clip-path .5s ease-in-out;
+        
+
+    }
+
+    .nav_menu {
+        z-index: 100;
+        ul{
+        padding: 0;
+            li{
+                margin: 20px;
+                a{
+                    &:hover{
+                        color: $black;
+                        border-bottom: 3px solid $gray;
+                        padding-bottom: 15px;
+                    }
+                }
+            }
+        }
+       
+    }
+
+    .nav_input:checked + .nav_menu, .nav_input:checked + .nav_menu_other{ /* PROPIEDADES PARA QUE FUNCIONE EL MENU */
+        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    }
+
+    .nav_menu_other { /* propiedades de la fuente del menu desplegable */
+        a{
+            font-size: 15px;
+            &:hover{
+                color: $white;
+                border-bottom: 1px solid $white;
+                padding-bottom: 20px;
+            }
+        }
+        
+    }
+
+    .navegation_other{
+        a{
+            img{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                width: 250px;
+            }
+        }
+    }
+
+    .home{
+        video{
+            margin-top: 90px;
+            height: 79vh;
+        }
+        img{
+            top: 42%;
+            width: 80%;
+        }
+    }
+
+    /*FOOTER PREV */
+    .footer_prev{ /*footer que quiero que desaparezca cuando aparece el footer principal*/
+        display: none ; /* LO DESAPAREZCO HASTA QUE SEPA COMO HACERLO */
+    }
+
+    /*FOOTER PRINC. */
+    .footer_bottom{ /*contenedor del footer principal */
+        padding: 30px;
+    }
+
+    .footer_bottom_redes{ /*propiedades de los hipervinculos */
+        ul{
+            a{
+                padding: 30px;
+                font-size: 3.5rem;
+                color: $white;
+            }
+        }
+    }
+    
+
+    .footer_bottom_logo{ /*logo principal de las redes */
+        img{
+            display: none; 
+        }
+    }
+    
+    .footer_bottom_copyright { /* propiedades de la informacion legal */
+        font-size: 1.7rem;
+        text-align: center;
+    }
+    
+    .footer_bottom_info {
+        a{
+            display: none;
+        }
+    }
+
+    /*GALERIA VISTA TABLET */
+
+    .container_grid_gallery{
+        display: grid; 
+        grid-template-rows: repeat(3,1fr); /*defino las filas*/
+        grid-template-columns: repeat(3,1fr); /*defino las columnas*/
+        grid-template-areas:
+        "section_0 section_0 section_4"
+        "section_2 section_3 section_4"
+        "section_1 section_3 section_5"
+        ;
+        /*TENGO UN ESPACIO EN BLANCO ENTRE LA GRILLA Y EL FOOTER, ENCONTRAR ALGUNA SOLUCION */
+        gap: 10px;
+        height: 100%;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .more_insta{
+        display: none;
+    }
+
+
+    /*FORMULARIO VISTA TABLET */
+
+    .main_form{
+        margin: 0;
+    }
+            
+    .form_container{ /*defino las propiedades del contenedor de todo el "main" */
+        margin-top: 92px;
+        margin-bottom: 92px;
+        justify-content: center;
+        width: 100%;    
+        height: 53vh;            
+    }
+            
+    .form_images{ /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
+        img{
+            &:first-of-type{
+                display: none; 
+            }
+        }
+ 
+    }        
+            
+    .form_images_2{ /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
+        display: none;
+    }        
+            
+    .form_contacts{ /*defino las propiedades del contenedor del formulario" */
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+/*LOCALIZACION RESPONSIVE MOBILE/TABLET */
+
+
+    .location_travel_container{
+        display: grid; 
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-areas:
+        "section_1 section_1"
+        "section_0 section_0"
+        ;
+        margin: 10px;
+        
+    }
+    
+    .travel {
+        grid-area: section_0 ;
+        ul{
+            height: 70%;
+            li{
+                margin: 10px;
+            }
+        }
+    }
+
+
+    .location_map_container{
+        grid-area: section_1;
+    }
+
+
+    .location_map_container{
+        div{
+            h2{
+                font-size: 3rem;
+            }
+        }
+        
+    }
+        /*ABOUT US */
+
+
+        .info{
+            width: 80%;
+            transition: all 2s;
+            div{
+                h2{
+                    margin-top: 50px;
+                    margin-bottom: 50px; 
+                }
+                p{
+                    margin-top: 30px;
+                    margin-bottom: 30px; 
+                    width: 100%; 
+                }
+                img{
+                    margin-top: 0;
+                }
+            }
+        }
+    
+        .images_info{
+           flex-direction: column;
+           
+       }
+       
+     
+       .image_info_experience{
+            display: flex;
+            align-items: center;
+            margin: 20px;
+            
+           &:nth-of-type(1n){
+            flex-direction: row;
+            
+           }
+           &:nth-of-type(2n){
+            flex-direction: row-reverse;
+            float: left;
+           }
+           
+          
+           
+           img{
+               margin: 0;
+               margin-left: 10px;
+               margin-right: 10px;
+           }
+           p{
+                width: 50% !important;
+                
+           }
+       }
+       
+    
+    
+       .up {
+           img{
+           width: 50px;
+           }
+       }
+}

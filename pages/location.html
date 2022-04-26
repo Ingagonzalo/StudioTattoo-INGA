@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/3b80f70e98.js" crossorigin="anonymous"></script> <!-- KIT DE LOGOS -->
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="shortcut icon" href="../images/logo_prov.ico" type="image/x-icon"> <!-- FAVICON -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../images/logo_favicon.png" type="image/x-icon"> <!-- FAVICON -->
+    <link rel="stylesheet" href="../css/stylesass.css">
     <title>LS Tattoo LOCALIZACION</title> <!-- TITULO DE LA PAGINA -->
 </head>
 <body class="body_others">
@@ -22,7 +23,7 @@
              <div class="nav_menu_other">
                  <a href="../index.html" class="nav_item">Inicio</a>
                  <a href="./gallery.html" class="nav_item">Galeria</a>
-                 <a href="./experience.html" class="nav_item">Testimonios</a>
+                 <a href="./reviewboot.html" class="nav_item">Testimonios</a>
                  <a href="./about.html" class="nav_item">Sobre Nosotros</a>
                  <a href="./contact.html" class="nav_item">Contacto</a>
                  <a href="./location.html" class="nav_item here">Localizacion</a>
@@ -33,20 +34,24 @@
     </header>
     <main>
         <section class="location"> <!-- LOCALIZACION -->
-            <div class="travel_container">
+            <div class="location_travel_container">
                 <div class="travel">
                     <h2>¿Como llegar?</h2>
                     <ul>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li><span class="material-symbols-outlined">
+                            directions_subway
+                            </span>Subte- Linea A- Estacion Lima.</li>
+                        <li><span class="material-symbols-outlined">directions_car
+                        </span>Bartolome Mitre 1121.</li>
+                        <li><span class="material-symbols-outlined">
+                            directions_bus
+                            </span>10- 17- 45- 59- 100- 105 </li>
+
                     </ul>
                 </div>
-                <div class="map_container">
+                <div class="location_map_container">
                     <h2>Nuestro Estudio</h2> 
-                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.859744748221!2d-58.38488738421675!3d-34.60770796521744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacffde1cbfd%3A0x48ba59e1e83d2dfb!2sBartolom%C3%A9%20Mitre%2C%20C1010%20CABA!5e0!3m2!1ses!2sar!4v1647461820186!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe class="location_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.859744748221!2d-58.38488738421675!3d-34.60770796521744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacffde1cbfd%3A0x48ba59e1e83d2dfb!2sBartolom%C3%A9%20Mitre%2C%20C1010%20CABA!5e0!3m2!1ses!2sar!4v1647461820186!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </section>
@@ -70,7 +75,7 @@
         </section>
         <!-- FOOTER PRINCIPAL -->
         <section class="footer_bottom">
-            <div class="redes">  <!-- REDES SOCIALES -->       
+            <div class="footer_bottom_redes">
                 <ul>
                     <li><a href="https://www.instagram.com/ls_tattoo_q/?hl=es-la" target="_blank"> <i class="fa-brands fa-instagram"></i> </a></li>
                     <li> <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i> </a></li>
@@ -78,17 +83,17 @@
                     <li><a href="#" target="_blank"><i class="fa-solid fa-envelope"></i></a></li>
                 </ul>
             </div>
-            <div class="logo_footer"> <!-- LOGO DEL FOOTER -->    
-                <img src="../images/logo_tittle_2-white.png" alt="">
+            <div class="footer_bottom_logo">
+              <img src="../images/logo_tittle_2-white.png" alt="">
             </div>
-            <div class="copyright">
-                <small>©2022 - LS TATTOO - TATTOO STUDIO, Todos los Derechos Reservados</small>
+            <div class="footer_bottom_copyright">
+              <small>©2022 - LS TATTOO - TATTOO STUDIO, Todos los Derechos Reservados</small>
             </div>
-            <div class="info_footer"> <!-- ADICIONALES LEGALES -->
-                <a href="">Informacion legal</a>
-                <a href="./pages/about.html">About Us</a>
+            <div class="footer_bottom_info">
+              <a href="">Informacion legal</a>
+              <a href="./about.html">About Us</a>
             </div>
-        </section> 
+           </section>
     </footer>
 </body>
 </html>
