@@ -174,7 +174,9 @@ html {
   /*defino las filas*/
   grid-template-columns: repeat(3, 300px);
   /*defino las columnas*/
-  grid-template-areas: "section_0 section_0 section_4" "section_2 section_3 section_4" "section_1 section_3 section_5";
+  grid-template-areas: "section_0 section_0 section_4"
+ "section_2 section_3 section_4"
+ "section_1 section_3 section_5";
   justify-content: center;
   gap: 10px;
   margin: 50px; }
@@ -428,7 +430,9 @@ html {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas: 'section_0 section_1 section_1 section_1 .' 'section_0 section_1 section_1 section_1 .' '. . . . .';
+  grid-template-areas: 'section_0 section_1 section_1 section_1 .'
+ 'section_0 section_1 section_1 section_1 .'
+ '. . . . .';
   gap: 50px;
   height: 100%;
   margin: 20px 100px 20px 100px; }
@@ -575,7 +579,12 @@ html {
     /*defino las filas*/
     grid-template-columns: repeat(1, 0.8fr);
     /*defino las columnas*/
-    grid-template-areas: "section_0" "section_1" "section_2" "section_3" "section_4" "section_5";
+    grid-template-areas: "section_0"
+ "section_1"
+ "section_2"
+ "section_3"
+ "section_4"
+ "section_5";
     gap: 10px;
     height: 100%;
     margin: 50px 25px 50px 25px; }
@@ -617,7 +626,8 @@ html {
   .location_travel_container {
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "section_1 section_1" "section_0 section_0";
+    grid-template-areas: "section_1 section_1"
+ "section_0 section_0";
     margin: 10px; }
   .travel ul {
     height: 70%; }
@@ -715,7 +725,9 @@ html {
     /*defino las filas*/
     grid-template-columns: repeat(3, 1fr);
     /*defino las columnas*/
-    grid-template-areas: "section_0 section_0 section_4" "section_2 section_3 section_4" "section_1 section_3 section_5";
+    grid-template-areas: "section_0 section_0 section_4"
+ "section_2 section_3 section_4"
+ "section_1 section_3 section_5";
     /*TENGO UN ESPACIO EN BLANCO ENTRE LA GRILLA Y EL FOOTER, ENCONTRAR ALGUNA SOLUCION */
     gap: 10px;
     height: 100%;
@@ -750,7 +762,8 @@ html {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "section_1 section_1" "section_0 section_0";
+    grid-template-areas: "section_1 section_1"
+ "section_0 section_0";
     margin: 10px; }
   .travel {
     grid-area: section_0; }
