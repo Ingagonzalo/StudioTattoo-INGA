@@ -1,2 +1,5 @@
-pages/experience.html
-css/style.css
+./pages/experience.html
+./css/stylesass.css
+node_modules
+sass
+scss

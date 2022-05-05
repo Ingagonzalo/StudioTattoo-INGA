@@ -2,6 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@600&display=swap");
+body {
+  background-color: #121212; }
+
 html {
   font-size: 62.5%; }
 
@@ -29,91 +32,12 @@ html {
     padding: 30px;
     transition: all .5s; }
     .nav_menu a:hover {
-      color: gainsboro;
-      border-bottom: 1px solid gainsboro;
+      color: white;
+      border-bottom: 1px solid white;
       padding-bottom: 15px; }
 
 .nav_label, .nav_input {
   display: none; }
-
-.home {
-  display: flex;
-  justify-content: center;
-  position: static;
-  margin-bottom: 5%; }
-  .home video {
-    object-fit: cover;
-    width: 95vw;
-    height: 80vh;
-    margin: 1% 0% 1% 0%;
-    z-index: -1;
-    padding: 1% 1% 1% 1%;
-    border: 2px solid rgba(110, 110, 110, 0.5); }
-  .home img {
-    position: absolute;
-    top: 46%;
-    width: 800px;
-    z-index: 90;
-    transition: all 1s; }
-    .home img:hover {
-      position: absolute;
-      top: 46%;
-      width: 850px;
-      z-index: 9000;
-      transition: all 1s; }
-
-.footer_bottom {
-  /*contenedor del footer principal */
-  border-top: 2px solid #6e6e64;
-  border-bottom: 2px solid #6e6e64;
-  background-color: #272727;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px;
-  width: 100%; }
-
-.footer_bottom_redes ul {
-  /*propiedades del ul de las redes */
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-bottom: 20px;
-  padding: 0; }
-
-.footer_bottom_redes a {
-  padding: 40px;
-  font-size: 3rem;
-  color: #737373; }
-  .footer_bottom_redes a:hover {
-    color: gainsboro; }
-
-.footer_bottom_logo img {
-  /*logo principal de las redes */
-  width: 300px;
-  margin-top: 20px;
-  margin-bottom: 20px; }
-
-.footer_bottom_copyright {
-  /* propiedades de la informacion legal */
-  margin-bottom: 5px;
-  font-size: 1.5rem;
-  color: whitesmoke; }
-
-.footer_bottom_info a {
-  text-decoration: underline;
-  color: whitesmoke;
-  font-size: 1.3rem; }
-
-.footer_bottom_info:first-of-type {
-  padding-right: 5px;
-  border-right: 2px solid #737373; }
-
-.footer_prev {
-  /*footer que quiero que desaparezca cuando aparece el footer principal*/
-  display: none;
-  /* LO DESAPAREZCO HASTA QUE SEPA COMO HACERLO */ }
 
 /* MENU DE NAVEGACION DE LAS OTRAS PAGINAS */
 .navegation_other {
@@ -144,26 +68,104 @@ html {
     transition: all 1s;
     text-decoration: none; }
     .nav_menu_other a:hover {
-      color: gainsboro;
-      border-bottom: 1px solid gainsboro; }
+      color: white;
+      border-bottom: 1px solid white; }
+
+/*PROPIEDAD QUE ME INDICA EN QUE PAGINA ESTOY EN ESE MOMENTO, EN EL NAVBAR */
+.here {
+  color: white !important;
+  font-size: 1.4rem; }
+
+.footer_bottom {
+  /*contenedor del footer principal */
+  border-top: 2px solid #6e6e64;
+  border-bottom: 2px solid #6e6e64;
+  background-color: #272727;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  width: 100%; }
+
+.footer_bottom_redes ul {
+  /*propiedades del ul de las redes */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 0; }
+
+.footer_bottom_redes a {
+  padding: 40px;
+  font-size: 3rem;
+  color: #737373; }
+  .footer_bottom_redes a:hover {
+    color: white; }
+
+.footer_bottom_logo img {
+  /*logo principal de las redes */
+  width: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.footer_bottom_copyright {
+  /* propiedades de la informacion legal */
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+  color: whitesmoke; }
+
+.footer_bottom_info a {
+  text-decoration: underline;
+  color: whitesmoke;
+  font-size: 1.3rem; }
+
+.footer_bottom_info:first-of-type {
+  padding-right: 5px;
+  border-right: 2px solid #737373; }
+
+.footer_prev {
+  /*footer que quiero que desaparezca cuando aparece el footer principal*/
+  display: none;
+  /* LO DESAPAREZCO HASTA QUE SEPA COMO HACERLO */ }
+
+.home {
+  display: flex;
+  justify-content: center;
+  position: static;
+  margin-bottom: 5%; }
+  .home video {
+    object-fit: cover;
+    width: 95vw;
+    height: 80vh;
+    margin: 1% 0% 1% 0%;
+    z-index: -1;
+    padding: 1% 1% 1% 1%;
+    border: 2px solid rgba(110, 110, 110, 0.5); }
+  .home img {
+    position: absolute;
+    top: 46%;
+    width: 800px;
+    z-index: 90;
+    transition: all 1s; }
+    .home img:hover {
+      position: absolute;
+      top: 46%;
+      width: 850px;
+      z-index: 9000;
+      transition: all 1s; }
 
 /*TITULO PRINCIPAL DE TODAS LAS PAGINAS MENOS DEL HOME*/
 .tittle {
   padding: 80px;
-  color: gainsboro;
+  color: white;
   text-transform: uppercase;
-  display: block;
   text-align: center;
-  background-color: #050505;
   margin-top: 0;
   font-family: 'Anton', sans-serif;
   letter-spacing: 5px;
-  font-size: 4rem; }
-
-/*PROPIEDAD QUE ME INDICA EN QUE PAGINA ESTOY EN ESE MOMENTO, EN EL NAVBAR */
-.here {
-  color: gainsboro !important;
-  font-size: 1.4rem; }
+  font-size: 4rem;
+  background-color: #050505; }
 
 /*GALERIA */
 .container_grid_gallery {
@@ -172,9 +174,7 @@ html {
   /*defino las filas*/
   grid-template-columns: repeat(3, 300px);
   /*defino las columnas*/
-  grid-template-areas: "section_0 section_0 section_4"
- "section_2 section_3 section_4"
- "section_1 section_3 section_5";
+  grid-template-areas: "section_0 section_0 section_4" "section_2 section_3 section_4" "section_1 section_3 section_5";
   justify-content: center;
   gap: 10px;
   margin: 50px; }
@@ -228,7 +228,8 @@ html {
   border-top: 2px solid rgba(110, 110, 110, 0.5);
   background: radial-gradient(circle, rgba(255, 255, 255, 0.048) 60%, #adadad 100%); }
   .more_insta a {
-    color: black; }
+    color: black;
+    color: white; }
   .more_insta h3 {
     font-size: 2.5rem;
     text-transform: uppercase;
@@ -286,12 +287,17 @@ html {
   /*defino el contenedor del text_area" */
   margin-bottom: 20px;
   padding: 12px;
-  border: 2px solid #515151; }
+  border: 2px solid #515151;
+  background-color: #737373; }
+  .form_parts::placeholder {
+    color: #737373; }
+  .form_parts::placeholder {
+    color: white; }
 
 #sumbit_form {
   /*propiedades del boton" */
   padding: 12px;
-  background-color: black;
+  background-color: #050505;
   color: white; }
 
 .form_images img:first-of-type {
@@ -327,7 +333,9 @@ html {
   box-shadow: 2px 2px 15px #6e6e64;
   background-color: white;
   padding: 20px;
-  margin-bottom: 70px; }
+  margin-bottom: 70px;
+  background-color: #050505;
+  box-shadow: 2px 2px 15px white; }
 
 .box_top {
   /* section de la parte superior del testimonio  */
@@ -364,7 +372,16 @@ html {
     font-size: 1.2rem; }
 
 .comentarios_contenedor p {
-  font-size: 1.3rem; }
+  font-size: 1.3rem;
+  color: white; }
+
+#h2_tittle, .info div h2, .location div h2 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  margin-top: 100px;
+  font-family: 'Merriweather Sans', sans-serif;
+  text-align: center;
+  color: white; }
 
 /*ABOUT US */
 .info {
@@ -373,12 +390,8 @@ html {
   margin: 0px auto; }
   .info div p {
     font-size: 2rem;
-    margin-top: 50px; }
-  .info div h2 {
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    margin-top: 100px;
-    font-family: 'Merriweather Sans', sans-serif; }
+    margin-top: 50px;
+    color: white; }
   .info div img {
     margin-top: 50px; }
 
@@ -415,9 +428,7 @@ html {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas: 'section_0 section_1 section_1 section_1 .'
- 'section_0 section_1 section_1 section_1 .'
- '. . . . .';
+  grid-template-areas: 'section_0 section_1 section_1 section_1 .' 'section_0 section_1 section_1 section_1 .' '. . . . .';
   gap: 50px;
   height: 100%;
   margin: 20px 100px 20px 100px; }
@@ -434,7 +445,8 @@ html {
     height: 80%; }
     .travel ul li {
       margin: 20px;
-      font-size: 2rem; }
+      font-size: 2rem;
+      color: white; }
 
 .location_map_container {
   grid-area: section_1;
@@ -442,13 +454,6 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center; }
-
-.location div h2 {
-  text-align: center;
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  margin-top: 50px;
-  font-family: 'Merriweather Sans', sans-serif; }
 
 .location_map {
   width: 100%; }
@@ -502,8 +507,8 @@ html {
   .navegation_other {
     width: 100%; }
     .navegation_other a:hover {
-      color: gainsboro;
-      border-bottom: 1px solid gainsboro;
+      color: white;
+      border-bottom: 1px solid white;
       padding-bottom: 20px; }
     .navegation_other a img {
       margin-top: 20px;
@@ -516,6 +521,11 @@ html {
   .home img {
     top: 43%;
     width: 80%; }
+    .home img:hover:hover {
+      position: absolute;
+      top: 43%;
+      width: 80%;
+      transition: all 1s; }
   /*FOOTER PREV */
   .footer_prev {
     /*footer que quiero que desaparezca cuando aparece el footer principal*/
@@ -544,26 +554,20 @@ html {
     font-size: 3rem; }
   /*FORMULARIO VISTA MOBILE */
   .main_form {
-    margin: 0; }
+    margin: 0;
+    height: 65vh;
+    margin-top: 50px;
+    margin-bottom: 50px; }
   .form_container {
     /*defino las propiedades del contenedor de todo el "main" */
-    margin-top: 92px;
-    margin-bottom: 92px;
+    margin: 0;
     justify-content: center;
-    width: 100%;
-    height: 53vh; }
+    width: 100%; }
   .form_images {
-    /*imagen del formulario, buscar una mejor manera de posicionar los elementos */ }
-    .form_images img:first-of-type {
-      display: none; }
-  .form_images_2 {
-    /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
     display: none; }
   .form_contacts {
     /*defino las propiedades del contenedor del formulario" */
-    width: 80%;
-    display: flex;
-    flex-direction: column; }
+    width: 80%; }
   /*GALERIA VISTA MOBILE */
   .container_grid_gallery {
     display: grid;
@@ -571,12 +575,7 @@ html {
     /*defino las filas*/
     grid-template-columns: repeat(1, 0.8fr);
     /*defino las columnas*/
-    grid-template-areas: "section_0"
- "section_1"
- "section_2"
- "section_3"
- "section_4"
- "section_5";
+    grid-template-areas: "section_0" "section_1" "section_2" "section_3" "section_4" "section_5";
     gap: 10px;
     height: 100%;
     margin: 50px 25px 50px 25px; }
@@ -618,8 +617,7 @@ html {
   .location_travel_container {
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "section_1 section_1"
- "section_0 section_0";
+    grid-template-areas: "section_1 section_1" "section_0 section_0";
     margin: 10px; }
   .travel ul {
     height: 70%; }
@@ -672,8 +670,8 @@ html {
     .nav_menu_other a {
       font-size: 15px; }
       .nav_menu_other a:hover {
-        color: gainsboro;
-        border-bottom: 1px solid gainsboro;
+        color: white;
+        border-bottom: 1px solid white;
         padding-bottom: 20px; }
   .navegation_other a img {
     margin-top: 20px;
@@ -699,7 +697,7 @@ html {
     .footer_bottom_redes ul a {
       padding: 30px;
       font-size: 3.5rem;
-      color: gainsboro; }
+      color: white; }
   .footer_bottom_logo {
     /*logo principal de las redes */ }
     .footer_bottom_logo img {
@@ -717,9 +715,7 @@ html {
     /*defino las filas*/
     grid-template-columns: repeat(3, 1fr);
     /*defino las columnas*/
-    grid-template-areas: "section_0 section_0 section_4"
- "section_2 section_3 section_4"
- "section_1 section_3 section_5";
+    grid-template-areas: "section_0 section_0 section_4" "section_2 section_3 section_4" "section_1 section_3 section_5";
     /*TENGO UN ESPACIO EN BLANCO ENTRE LA GRILLA Y EL FOOTER, ENCONTRAR ALGUNA SOLUCION */
     gap: 10px;
     height: 100%;
@@ -754,8 +750,7 @@ html {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "section_1 section_1"
- "section_0 section_0";
+    grid-template-areas: "section_1 section_1" "section_0 section_0";
     margin: 10px; }
   .travel {
     grid-area: section_0; }
