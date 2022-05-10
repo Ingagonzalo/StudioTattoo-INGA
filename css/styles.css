@@ -1,9 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap");
+/*TEXTOS */
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@900&display=swap");
+/*TEXTOS */
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+/*TITULOS DE PAGINAS */
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@600&display=swap");
+/*titulos internos */
 body {
-  background-color: #121212; }
+  background-color: white; }
 
 html {
   font-size: 62.5%; }
@@ -25,7 +29,7 @@ html {
   padding-top: 30px;
   padding-bottom: 30px;
   border-bottom: 2px solid rgba(110, 110, 110, 0.5);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: bold; }
   .nav_menu a {
     color: #b4b4b4;
@@ -42,7 +46,6 @@ html {
 /* MENU DE NAVEGACION DE LAS OTRAS PAGINAS */
 .navegation_other {
   /* contenedor del menu de navegacion de las otras paginas */
-  background-color: #121212;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,7 +61,7 @@ html {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   padding-top: 30px;
   padding-bottom: 30px; }
   .nav_menu_other a {
@@ -74,7 +77,7 @@ html {
 /*PROPIEDAD QUE ME INDICA EN QUE PAGINA ESTOY EN ESE MOMENTO, EN EL NAVBAR */
 .here {
   color: white !important;
-  font-size: 1.4rem; }
+  font-size: 1.6rem; }
 
 .footer_bottom {
   /*contenedor del footer principal */
@@ -156,6 +159,86 @@ html {
       transition: all 1s; }
 
 /*TITULO PRINCIPAL DE TODAS LAS PAGINAS MENOS DEL HOME*/
+.header_gallery {
+  position: relative; }
+  .header_gallery::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7) url(../images/imgheader1.jpg);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: darken;
+    filter: grayscale(100%); }
+
+.header_location {
+  position: relative; }
+  .header_location::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7) url(../images/imgheader5.jpg);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: darken;
+    filter: grayscale(100%); }
+
+.header_about {
+  position: relative; }
+  .header_about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7) url(../images/imgheader3.jpg);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: darken;
+    filter: grayscale(100%); }
+
+.header_review {
+  position: relative; }
+  .header_review::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7) url(../images/imgheader2.jpg);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: darken;
+    filter: grayscale(100%); }
+
+.header_contact {
+  position: relative; }
+  .header_contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7) url(../images/imgheader4.jpg);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: darken;
+    filter: grayscale(100%); }
+
 .tittle {
   padding: 80px;
   color: white;
@@ -164,9 +247,17 @@ html {
   margin-top: 0;
   font-family: 'Anton', sans-serif;
   letter-spacing: 5px;
-  font-size: 4rem;
-  background-color: #050505; }
+  font-size: 4rem; }
 
+/*.header_location{
+    @extend .header;
+    &::before{
+        background: rgba(0, 0, 0, 0.7) url(../images/tatuador1.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    
+}*/
 /*GALERIA */
 .container_grid_gallery {
   display: grid;
@@ -228,8 +319,7 @@ html {
   border-top: 2px solid rgba(110, 110, 110, 0.5);
   background: radial-gradient(circle, rgba(255, 255, 255, 0.048) 60%, #adadad 100%); }
   .more_insta a {
-    color: black;
-    color: white; }
+    color: black; }
   .more_insta h3 {
     font-size: 2.5rem;
     text-transform: uppercase;
@@ -238,6 +328,8 @@ html {
     transition: all 2s; }
     .more_insta h3:hover {
       font-size: 3rem; }
+    .more_insta h3 strong {
+      font-family: 'Maven Pro', sans-serif; }
   .more_insta img {
     display: none;
     /*Lo escondo hasta que sepa como realizar la animacion que quiero */
@@ -248,9 +340,6 @@ html {
     bottom: -700px;
     transform: rotate(20deg); }
 
-/*.more_insta h3 strong{
-   /*Lugar reservado para cambiar la tipografia 
-}*/
 /*CONTACTOS */
 .main_form {
   margin-left: 10%; }
@@ -263,6 +352,13 @@ html {
   align-items: center;
   margin-bottom: 200px;
   margin-top: 200px; }
+
+.form_images img:first-of-type {
+  /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
+  position: absolute;
+  width: 250px;
+  left: 30%;
+  top: 650px; }
 
 .form_contacts {
   /*defino las propiedades del contenedor del formulario" */
@@ -287,25 +383,15 @@ html {
   /*defino el contenedor del text_area" */
   margin-bottom: 20px;
   padding: 12px;
-  border: 2px solid #515151;
-  background-color: #737373; }
+  border: 2px solid #515151; }
   .form_parts::placeholder {
     color: #737373; }
-  .form_parts::placeholder {
-    color: white; }
 
 #sumbit_form {
   /*propiedades del boton" */
   padding: 12px;
   background-color: #050505;
   color: white; }
-
-.form_images img:first-of-type {
-  /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
-  position: absolute;
-  width: 250px;
-  left: 30%;
-  top: 650px; }
 
 .form_images_2 {
   /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
@@ -333,9 +419,7 @@ html {
   box-shadow: 2px 2px 15px #6e6e64;
   background-color: white;
   padding: 20px;
-  margin-bottom: 70px;
-  background-color: #050505;
-  box-shadow: 2px 2px 15px white; }
+  margin-bottom: 70px; }
 
 .box_top {
   /* section de la parte superior del testimonio  */
@@ -365,23 +449,22 @@ html {
   flex-direction: column; }
   .name_user strong {
     color: #737373;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-bottom: 4px; }
   .name_user span {
     color: #737373;
-    font-size: 1.2rem; }
+    font-size: 1.4rem; }
 
 .comentarios_contenedor p {
-  font-size: 1.3rem;
-  color: white; }
+  font-size: 1.6rem;
+  font-weight: bold; }
 
 #h2_tittle, .info div h2, .location div h2 {
   font-size: 3.5rem;
   text-transform: uppercase;
   margin-top: 100px;
   font-family: 'Merriweather Sans', sans-serif;
-  text-align: center;
-  color: white; }
+  text-align: center; }
 
 /*ABOUT US */
 .info {
@@ -390,8 +473,7 @@ html {
   margin: 0px auto; }
   .info div p {
     font-size: 2rem;
-    margin-top: 50px;
-    color: white; }
+    margin-top: 50px; }
   .info div img {
     margin-top: 50px; }
 
@@ -445,8 +527,7 @@ html {
     height: 80%; }
     .travel ul li {
       margin: 20px;
-      font-size: 2rem;
-      color: white; }
+      font-size: 2rem; }
 
 .location_map_container {
   grid-area: section_1;

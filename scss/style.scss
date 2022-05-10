@@ -7,12 +7,18 @@ $gray: rgb(115,115,115);
 $textonav:rgb(180, 180, 180);
 $copywhite: rgb(245,245,245);
 $black: rgb(5,5,5);
-$theme_dark: true;
+$theme_dark: false;
+$header_img_gallery: url(../images/imgheader1.jpg);
+$header_img_review: url(../images/imgheader2.jpg);
+$header_img_about: url(../images/imgheader3.jpg);
+$header_img_contact: url(../images/imgheader4.jpg);
+$header_img_location: url(../images/imgheader5.jpg);
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap'); /*TEXTOS */
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@900&display=swap'); /*TEXTOS */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap'); /*TITULOS DE PAGINAS */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@600&display=swap'); /*titulos internos */
 
 
 body{
@@ -84,6 +90,42 @@ html{
 
 /*TITULO PRINCIPAL DE TODAS LAS PAGINAS MENOS DEL HOME*/
 
+
+
+@mixin header_images($header_img_gallery) {
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        background: rgba(0, 0, 0, 0.7) $header_img_gallery;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: darken;
+        filter: grayscale(100%);
+    }
+}
+
+.header_gallery{
+    @include header_images($header_img_gallery);
+}
+.header_location{
+    @include header_images($header_img_location);
+}
+.header_about{
+    @include header_images($header_img_about);
+}
+
+.header_review{
+    @include header_images($header_img_review);
+}
+.header_contact{
+    @include header_images($header_img_contact);
+}
+
 .tittle{ 
     padding: 80px;
     color: $white;
@@ -93,10 +135,23 @@ html{
     font-family: 'Anton', sans-serif;
     letter-spacing: 5px;
     font-size: 4rem;
-    background-color: $black;
+
 }
 
 
+.header_gallery{
+
+}
+
+/*.header_location{
+    @extend .header;
+    &::before{
+        background: rgba(0, 0, 0, 0.7) url(../images/tatuador1.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    
+}*/
 
 
 
@@ -193,6 +248,9 @@ html{
         &:hover{
             font-size: 3rem;
         }
+        strong{
+            font-family: 'Maven Pro', sans-serif;
+        }
     }
     img{
         display: none; /*Lo escondo hasta que sepa como realizar la animacion que quiero */
@@ -205,9 +263,6 @@ html{
     }
 }
 
-/*.more_insta h3 strong{
-   /*Lugar reservado para cambiar la tipografia 
-}*/
 
 /*CONTACTOS */
 
@@ -223,6 +278,18 @@ html{
     margin-bottom: 200px;
     margin-top: 200px;
 
+}
+
+.form_images{ 
+    img{
+        &:first-of-type{ /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
+            position: absolute;  
+            width: 250px;
+            left: 30%;
+            top: 650px;
+            }
+    }
+    
 }
 
 .form_contacts{ /*defino las propiedades del contenedor del formulario" */
@@ -269,17 +336,7 @@ html{
     color: $white;
 }
 
-.form_images{ 
-    img{
-        &:first-of-type{ /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
-            position: absolute;  
-            width: 250px;
-            left: 30%;
-            top: 650px;
-            }
-    }
-    
-}
+
 
 .form_images_2{ /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
     position: absolute;  
@@ -344,17 +401,18 @@ html{
     flex-direction: column;
     strong{
         color: $gray;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         margin-bottom: 4px;
     }
     span{
         color: $gray;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 }
 
 .comentarios_contenedor p{
-    font-size: 1.3rem;
+    font-size: 1.6rem;
+    font-weight: bold;
     @if $theme_dark == true{
         color: $white;
     }
@@ -362,15 +420,14 @@ html{
 }
 
 #h2_tittle{
-            font-size: 3.5rem;
-            text-transform: uppercase;
-            margin-top: 100px;
-            font-family: 'Merriweather Sans', sans-serif;
-            text-align: center;
-            @if $theme_dark == true {
-                color: $white;
-    
-            }
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    margin-top: 100px;
+    font-family: 'Merriweather Sans', sans-serif;
+    text-align: center;
+    @if $theme_dark == true {
+        color: $white;
+    }
 }
 
 /*ABOUT US */
