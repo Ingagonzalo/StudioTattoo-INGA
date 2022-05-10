@@ -67,20 +67,30 @@ html{
         padding:1% 1% 1% 1% ;
         border: 2px solid $colorbordeshadow;
     }
-    img{
-        position: absolute;
-        top: 46%;
-        width: 800px;
-        z-index: 90;
-        transition: all 1s;
-        &:hover{
+    div{
+            display: flex;
+            flex-direction: column;
             position: absolute;
-            top: 46%;
-            width: 850px;
-            z-index: 9000;
+            top: 40%;
+            align-items: center;
+        img{
+                                  
+            width: 800px;
+            z-index: 90;
             transition: all 1s;
         }
+        h3{
+            border: 1px solid $white;
+            width: 250px;
+            padding: 20px;
+            margin-top: 50px;
+            text-transform: uppercase;
+            color: $white;
+            text-align: center;
+        }
+        
     }
+
 
    
 }
@@ -142,17 +152,6 @@ html{
 .header_gallery{
 
 }
-
-/*.header_location{
-    @extend .header;
-    &::before{
-        background: rgba(0, 0, 0, 0.7) url(../images/tatuador1.jpg);
-        background-position: center;
-        background-size: cover;
-    }
-    
-}*/
-
 
 
 /*GALERIA */
@@ -406,7 +405,7 @@ html{
     }
     span{
         color: $gray;
-        font-size: 1.4rem;
+        font-size: 1.4;
     }
 }
 

@@ -145,18 +145,24 @@ html {
     z-index: -1;
     padding: 1% 1% 1% 1%;
     border: 2px solid rgba(110, 110, 110, 0.5); }
-  .home img {
+  .home div {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    top: 46%;
-    width: 800px;
-    z-index: 90;
-    transition: all 1s; }
-    .home img:hover {
-      position: absolute;
-      top: 46%;
-      width: 850px;
-      z-index: 9000;
+    top: 40%;
+    align-items: center; }
+    .home div img {
+      width: 800px;
+      z-index: 90;
       transition: all 1s; }
+    .home div h3 {
+      border: 1px solid white;
+      width: 250px;
+      padding: 20px;
+      margin-top: 50px;
+      text-transform: uppercase;
+      color: white;
+      text-align: center; }
 
 /*TITULO PRINCIPAL DE TODAS LAS PAGINAS MENOS DEL HOME*/
 .header_gallery {
@@ -249,15 +255,6 @@ html {
   letter-spacing: 5px;
   font-size: 4rem; }
 
-/*.header_location{
-    @extend .header;
-    &::before{
-        background: rgba(0, 0, 0, 0.7) url(../images/tatuador1.jpg);
-        background-position: center;
-        background-size: cover;
-    }
-    
-}*/
 /*GALERIA */
 .container_grid_gallery {
   display: grid;
@@ -453,7 +450,7 @@ html {
     margin-bottom: 4px; }
   .name_user span {
     color: #737373;
-    font-size: 1.4rem; }
+    font-size: 1.4; }
 
 .comentarios_contenedor p {
   font-size: 1.6rem;
@@ -599,14 +596,12 @@ html {
   .home video {
     margin-top: 65px;
     height: 79vh; }
-  .home img {
-    top: 43%;
-    width: 80%; }
-    .home img:hover:hover {
-      position: absolute;
-      top: 43%;
-      width: 80%;
-      transition: all 1s; }
+  .home div {
+    top: 45%; }
+    .home div img {
+      width: 80%; }
+    .home div h3 {
+      display: none; }
   /*FOOTER PREV */
   .footer_prev {
     /*footer que quiero que desaparezca cuando aparece el footer principal*/
@@ -761,9 +756,12 @@ html {
   .home video {
     margin-top: 90px;
     height: 79vh; }
-  .home img {
-    top: 42%;
-    width: 80%; }
+  .home div {
+    top: 41%; }
+    .home div img {
+      width: 80%; }
+    .home div h3 {
+      display: none; }
   /*FOOTER PREV */
   .footer_prev {
     /*footer que quiero que desaparezca cuando aparece el footer principal*/
