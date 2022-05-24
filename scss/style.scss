@@ -52,6 +52,7 @@ html{
 @import "navegation";
 @import "footer";
 
+
 .home{
     display: flex;
     justify-content: center;
@@ -68,30 +69,61 @@ html{
         border: 2px solid $colorbordeshadow;
     }
     div{
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            top: 40%;
-            align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%,-50%);          
         img{
                                   
             width: 800px;
             z-index: 90;
             transition: all 1s;
+            /*&:hover{
+                position: absolute;
+                
+                width: 850px;
+                z-index: 9000;
+                transition: all 1s;
+            }*/
         }
         h3{
-            border: 1px solid $white;
-            width: 250px;
-            padding: 20px;
-            margin-top: 50px;
-            text-transform: uppercase;
+            position: relative;
+            display: block;
             color: $white;
-            text-align: center;
+            font-size: 1.4rem;
+            text-decoration: none;
+            margin: 40px 0;
+            border: 2px solid $white;
+            padding: 14px 60px;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: 1s all ease;
+            &::before{
+                background: $white;
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                z-index: -1;
+                transition: all 0.6s ease;
+                width: 0%;
+                height: 100%;
+            }
+            &:hover{
+                color: $black;
+                &::before{
+                    width: 100%;
+                }
+            }
+
         }
+     
         
     }
-
-
    
 }
 
@@ -153,6 +185,17 @@ html{
 
 }
 
+/*.header_location{
+    @extend .header;
+    &::before{
+        background: rgba(0, 0, 0, 0.7) url(../images/tatuador1.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    
+}*/
+
+
 
 /*GALERIA */
 .container_grid_gallery{
@@ -177,6 +220,7 @@ html{
             transition: all .5s;
             &:hover{    /*Le agrego un filtro de blanco y negro al hover de las imageres */
                 filter: grayscale(1);
+
             }
         }
     }
@@ -250,32 +294,26 @@ html{
         strong{
             font-family: 'Maven Pro', sans-serif;
         }
+
     }
-    img{
-        display: none; /*Lo escondo hasta que sepa como realizar la animacion que quiero */
-        width: 200px;
-        position: absolute;
-        z-index: -1;
-        left: 20%;
-        bottom: -700px;
-        transform: rotate(20deg); 
-    }
+
 }
 
 
 /*CONTACTOS */
 
-.main_form{
-    margin-left: 10%;
-}
+
 
 .form_container{ /*defino las propiedades del contenedor de todo el "main" */
     font-size: 1.3rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     align-items: center;
     margin-bottom: 200px;
     margin-top: 200px;
+    width: 90vw;
+    position: relative;
+    
 
 }
 
@@ -283,20 +321,28 @@ html{
     img{
         &:first-of-type{ /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
             position: absolute;  
-            width: 250px;
-            left: 30%;
-            top: 650px;
+            width: 20%;
+            left: 25%;
+            top: 30px;
             }
     }
     
 }
 
+.form_images_2{ /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
+    position: absolute;  
+    width: 20%;
+    left: 12%;
+    top: -30px;
+}
+
+
 .form_contacts{ /*defino las propiedades del contenedor del formulario" */
-    width: 35%;
+    width: 50%;
     display: flex;
     flex-direction: column;
 
-   
+  
 }
 
 #conjunto_form{ /*defino las propiedades del contenedor del mail y el phone" */
@@ -337,12 +383,7 @@ html{
 
 
 
-.form_images_2{ /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
-    position: absolute;  
-    width: 250px;
-    left: 20%;
-    top: 450px;
-}
+
 
 /*RESENAS */
 
@@ -405,7 +446,7 @@ html{
     }
     span{
         color: $gray;
-        font-size: 1.4;
+        font-size: 1.5rem;
     }
 }
 
@@ -551,6 +592,8 @@ html{
     font-size: 30px;
 }
 
+@import "error404";
+
 @media screen and (max-width: 480px){
 
     @import "vistamobile";
@@ -561,3 +604,57 @@ html{
 
   @import "vistatablet";
 }
+
+@media screen and (min-width: 200px) and (max-width: 992px) and (orientation: landscape){
+
+    .nav_menu, .nav_menu_other{ /* PROPIEDADES DEL MENU DESPLEGABLE */
+    
+        height: 130vh;
+
+    }
+    
+    .home{
+        video{
+            margin-top: 90px;
+            height: 85vh;
+        }
+    
+        div{
+            top: 70%;
+            left: 50%;
+            img{
+                width: 100%;
+                
+            }
+        }
+    }
+        /*FORMULARIO VISTA TABLET */
+
+    .main_form{
+        margin: 20px;
+    }
+            
+    .form_container{ /*defino las propiedades del contenedor de todo el "main" */
+        margin-top: 92px;
+        margin-bottom: 92px;
+        justify-content: center;
+        width: 100%;    
+        height: 100vh;            
+    }
+            
+    .form_images{ /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
+        img{
+            display: none;
+        }
+
+    }        
+               
+            
+    .form_contacts{ /*defino las propiedades del contenedor del formulario" */
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+    

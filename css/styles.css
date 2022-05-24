@@ -148,21 +148,49 @@ html {
   .home div {
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: absolute;
-    top: 40%;
-    align-items: center; }
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
     .home div img {
       width: 800px;
       z-index: 90;
-      transition: all 1s; }
+      transition: all 1s;
+      /*&:hover{
+                position: absolute;
+                
+                width: 850px;
+                z-index: 9000;
+                transition: all 1s;
+            }*/ }
     .home div h3 {
-      border: 1px solid white;
-      width: 250px;
-      padding: 20px;
-      margin-top: 50px;
-      text-transform: uppercase;
+      position: relative;
+      display: block;
       color: white;
-      text-align: center; }
+      font-size: 1.4rem;
+      text-decoration: none;
+      margin: 40px 0;
+      border: 2px solid white;
+      padding: 14px 60px;
+      text-transform: uppercase;
+      overflow: hidden;
+      transition: 1s all ease; }
+      .home div h3::before {
+        background: white;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        transition: all 0.6s ease;
+        width: 0%;
+        height: 100%; }
+      .home div h3:hover {
+        color: #050505; }
+        .home div h3:hover::before {
+          width: 100%; }
 
 /*TITULO PRINCIPAL DE TODAS LAS PAGINAS MENOS DEL HOME*/
 .header_gallery {
@@ -255,6 +283,15 @@ html {
   letter-spacing: 5px;
   font-size: 4rem; }
 
+/*.header_location{
+    @extend .header;
+    &::before{
+        background: rgba(0, 0, 0, 0.7) url(../images/tatuador1.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    
+}*/
 /*GALERIA */
 .container_grid_gallery {
   display: grid;
@@ -327,39 +364,36 @@ html {
       font-size: 3rem; }
     .more_insta h3 strong {
       font-family: 'Maven Pro', sans-serif; }
-  .more_insta img {
-    display: none;
-    /*Lo escondo hasta que sepa como realizar la animacion que quiero */
-    width: 200px;
-    position: absolute;
-    z-index: -1;
-    left: 20%;
-    bottom: -700px;
-    transform: rotate(20deg); }
 
 /*CONTACTOS */
-.main_form {
-  margin-left: 10%; }
-
 .form_container {
   /*defino las propiedades del contenedor de todo el "main" */
   font-size: 1.3rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
   margin-bottom: 200px;
-  margin-top: 200px; }
+  margin-top: 200px;
+  width: 90vw;
+  position: relative; }
 
 .form_images img:first-of-type {
   /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
   position: absolute;
-  width: 250px;
-  left: 30%;
-  top: 650px; }
+  width: 20%;
+  left: 25%;
+  top: 30px; }
+
+.form_images_2 {
+  /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
+  position: absolute;
+  width: 20%;
+  left: 12%;
+  top: -30px; }
 
 .form_contacts {
   /*defino las propiedades del contenedor del formulario" */
-  width: 35%;
+  width: 50%;
   display: flex;
   flex-direction: column; }
 
@@ -389,13 +423,6 @@ html {
   padding: 12px;
   background-color: #050505;
   color: white; }
-
-.form_images_2 {
-  /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
-  position: absolute;
-  width: 250px;
-  left: 20%;
-  top: 450px; }
 
 /*RESENAS */
 .review {
@@ -450,7 +477,7 @@ html {
     margin-bottom: 4px; }
   .name_user span {
     color: #737373;
-    font-size: 1.4; }
+    font-size: 1.5rem; }
 
 .comentarios_contenedor p {
   font-size: 1.6rem;
@@ -539,6 +566,64 @@ html {
 .material-symbols-outlined {
   font-size: 30px; }
 
+.body_error404 {
+  background-image: url(../images/Error404.jpg);
+  background-position: center;
+  background-size: cover; }
+
+.main_error404 section {
+  height: 90vh;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 80vw;
+  align-content: center;
+  margin: 0 auto; }
+  .main_error404 section div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .main_error404 section div h1 {
+      font-size: 20rem;
+      margin: 0;
+      color: white; }
+    .main_error404 section div h2 {
+      margin: 0;
+      font-size: 1.8grem;
+      color: white; }
+    .main_error404 section div h3 {
+      position: relative;
+      display: block;
+      color: white;
+      font-size: 1.4rem;
+      text-decoration: none;
+      margin: 40px 0;
+      border: 2px solid white;
+      padding: 14px 60px;
+      text-transform: uppercase;
+      overflow: hidden;
+      transition: 1s all ease; }
+      .main_error404 section div h3::before {
+        background: white;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        transition: all 0.6s ease;
+        width: 0%;
+        height: 100%; }
+      .main_error404 section div h3:hover {
+        color: #050505; }
+        .main_error404 section div h3:hover::before {
+          width: 100%; }
+
 @media screen and (max-width: 480px) {
   /*MENU HAMBURGUESA */
   .menu_responsive {
@@ -572,7 +657,7 @@ html {
     background-color: black;
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
     transition: clip-path .5s ease-in-out;
-    z-index: 90000; }
+    z-index: 900; }
   .nav_menu a, .nav_menu_other a {
     padding: 10px; }
     .nav_menu a:hover, .nav_menu_other a:hover {
@@ -597,9 +682,10 @@ html {
     margin-top: 65px;
     height: 79vh; }
   .home div {
-    top: 45%; }
+    top: 48%;
+    left: 50%; }
     .home div img {
-      width: 80%; }
+      width: 160%; }
     .home div h3 {
       display: none; }
   /*FOOTER PREV */
@@ -638,7 +724,9 @@ html {
     /*defino las propiedades del contenedor de todo el "main" */
     margin: 0;
     justify-content: center;
-    width: 100%; }
+    width: 100%;
+    position: absolute;
+    top: 31%; }
   .form_images {
     display: none; }
   .form_contacts {
@@ -719,7 +807,7 @@ html {
     right: 0px;
     bottom: 0;
     width: 450px;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -727,7 +815,8 @@ html {
     align-items: flex-start;
     padding: 30px;
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-    transition: clip-path .5s ease-in-out; }
+    transition: clip-path .5s ease-in-out;
+    z-index: 900; }
   .nav_menu {
     z-index: 100; }
     .nav_menu ul {
@@ -755,13 +844,12 @@ html {
     width: 250px; }
   .home video {
     margin-top: 90px;
-    height: 79vh; }
+    height: 85vh; }
   .home div {
-    top: 41%; }
+    top: 54%;
+    left: 50%; }
     .home div img {
-      width: 80%; }
-    .home div h3 {
-      display: none; }
+      width: 160%; }
   /*FOOTER PREV */
   .footer_prev {
     /*footer que quiero que desaparezca cuando aparece el footer principal*/
@@ -873,3 +961,35 @@ html {
       width: 50% !important; }
   .up img {
     width: 50px; } }
+
+@media screen and (min-width: 200px) and (max-width: 992px) and (orientation: landscape) {
+  .nav_menu, .nav_menu_other {
+    /* PROPIEDADES DEL MENU DESPLEGABLE */
+    height: 130vh; }
+  .home video {
+    margin-top: 90px;
+    height: 85vh; }
+  .home div {
+    top: 70%;
+    left: 50%; }
+    .home div img {
+      width: 100%; }
+  /*FORMULARIO VISTA TABLET */
+  .main_form {
+    margin: 20px; }
+  .form_container {
+    /*defino las propiedades del contenedor de todo el "main" */
+    margin-top: 92px;
+    margin-bottom: 92px;
+    justify-content: center;
+    width: 100%;
+    height: 100vh; }
+  .form_images {
+    /*imagen del formulario, buscar una mejor manera de posicionar los elementos */ }
+    .form_images img {
+      display: none; }
+  .form_contacts {
+    /*defino las propiedades del contenedor del formulario" */
+    width: 80%;
+    display: flex;
+    flex-direction: column; } }
