@@ -540,14 +540,13 @@ html {
   margin: 20px 100px 20px 100px; }
 
 .travel {
-  grid-area: section_0; }
+  grid-area: section_0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center; }
   .travel ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
     padding: 0;
-    margin-bottom: 50px;
     height: 80%; }
     .travel ul li {
       margin: 20px;
@@ -564,7 +563,7 @@ html {
   width: 100%; }
 
 .material-symbols-outlined {
-  font-size: 30px; }
+  font-size: 40px; }
 
 .body_error404 {
   background-image: url(../images/Error404.jpg);
