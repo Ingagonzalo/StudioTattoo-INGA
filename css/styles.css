@@ -106,6 +106,9 @@ html {
   .footer_bottom_redes a:hover {
     color: white; }
 
+.mail {
+  display: none; }
+
 .footer_bottom_logo img {
   /*logo principal de las redes */
   width: 300px;
@@ -156,14 +159,7 @@ html {
     .home div img {
       width: 800px;
       z-index: 90;
-      transition: all 1s;
-      /*&:hover{
-                position: absolute;
-                
-                width: 850px;
-                z-index: 9000;
-                transition: all 1s;
-            }*/ }
+      transition: all 1s; }
     .home div h3 {
       position: relative;
       display: block;
@@ -283,16 +279,6 @@ html {
   letter-spacing: 5px;
   font-size: 4rem; }
 
-/*.header_location{
-    @extend .header;
-    &::before{
-        background: rgba(0, 0, 0, 0.7) url(../images/tatuador1.jpg);
-        background-position: center;
-        background-size: cover;
-    }
-    
-}*/
-/*GALERIA */
 .container_grid_gallery {
   display: grid;
   grid-template-rows: repeat(3, 300px);
@@ -701,6 +687,8 @@ html {
     padding: 20px;
     font-size: 2.5rem;
     color: white; }
+  .mail {
+    display: block; }
   .footer_bottom_logo img {
     /*logo principal de las redes */
     display: none; }
@@ -864,6 +852,8 @@ html {
       padding: 30px;
       font-size: 3.5rem;
       color: white; }
+  .mail {
+    display: block; }
   .footer_bottom_logo {
     /*logo principal de las redes */ }
     .footer_bottom_logo img {

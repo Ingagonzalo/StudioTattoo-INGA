@@ -81,13 +81,7 @@ html{
             width: 800px;
             z-index: 90;
             transition: all 1s;
-            /*&:hover{
-                position: absolute;
-                
-                width: 850px;
-                z-index: 9000;
-                transition: all 1s;
-            }*/
+
         }
         h3{
             position: relative;
@@ -181,23 +175,6 @@ html{
 }
 
 
-.header_gallery{
-
-}
-
-/*.header_location{
-    @extend .header;
-    &::before{
-        background: rgba(0, 0, 0, 0.7) url(../images/tatuador1.jpg);
-        background-position: center;
-        background-size: cover;
-    }
-    
-}*/
-
-
-
-/*GALERIA */
 .container_grid_gallery{
     display: grid; 
     grid-template-rows: repeat(3,300px); /*defino las filas*/
