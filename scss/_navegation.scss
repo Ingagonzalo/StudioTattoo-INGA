@@ -1,0 +1,76 @@
+
+.nav_menu {
+    height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid $colorbordeshadow;
+    font-size: 1.4rem;
+    font-weight: bold;
+  
+    a {
+      color:$textonav;
+      padding: 30px;
+      transition: all .5s;
+  
+      &:hover {
+          
+        color: $white;
+        border-bottom: 1px solid $white;
+        padding-bottom: 15px;
+      }
+    }
+}
+
+.nav_label, .nav_input{
+    display: none;
+}
+
+/* MENU DE NAVEGACION DE LAS OTRAS PAGINAS */
+
+.navegation_other{ /* contenedor del menu de navegacion de las otras paginas */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  padding-right: 5%;
+  padding-left: 5%;
+
+
+  img{
+      width: 200px;
+  }
+
+} 
+
+.nav_menu_other{ /* propiedades del ul del menu de navegacion de las otras paginas */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  a{
+      padding: 20px;
+      color:$gray;
+      font-weight: bold;
+      transition: all 1s;
+      text-decoration: none; 
+
+      &:hover{
+          color: $white;
+          border-bottom: 1px solid $white;
+      }
+
+  }
+}
+
+/*PROPIEDAD QUE ME INDICA EN QUE PAGINA ESTOY EN ESE MOMENTO, EN EL NAVBAR */
+.here{ 
+  color: $white !important;
+  font-size: 1.6rem;
+}

@@ -1,0 +1,297 @@
+.nav_label{/* PROPIEDADES DEL LABEL DE MENU DESPLEGABLE */
+    display: block;
+    cursor: pointer;
+    img{
+        position: absolute; /* PROPIEDADES DEL ICONO DE MENU DESPLEGABLE */
+        right: 20px;
+        top: 20px;
+        width: 50px;
+    }
+
+
+}
+
+
+
+.nav_menu, .nav_menu_other{ /* PROPIEDADES DEL MENU DESPLEGABLE */
+    
+    position: absolute;
+    top: 95px;
+    right: 0px;
+    bottom: 0;
+    width: 450px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: black;
+    align-items: flex-start;
+    padding: 30px;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    transition: clip-path .5s ease-in-out;
+    z-index: 900;
+    
+
+}
+
+.nav_menu {
+    z-index: 100;
+    ul{
+    padding: 0;
+        li{
+            margin: 20px;
+            a{
+                &:hover{
+                    color: $black;
+                    border-bottom: 3px solid $gray;
+                    padding-bottom: 15px;
+                }
+            }
+        }
+    }
+   
+}
+
+.nav_input:checked + .nav_menu, .nav_input:checked + .nav_menu_other{ /* PROPIEDADES PARA QUE FUNCIONE EL MENU */
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+}
+
+.nav_menu_other { /* propiedades de la fuente del menu desplegable */
+    a{
+        font-size: 15px;
+        &:hover{
+            color: $white;
+            border-bottom: 1px solid $white;
+            padding-bottom: 20px;
+        }
+    }
+    
+}
+
+.navegation_other{
+    a{
+        img{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 250px;
+        }
+    }
+}
+
+.home{
+    video{
+        margin-top: 90px;
+        height: 85vh;
+    }
+
+    div{
+        top: 54%;
+        left: 50%;
+        img{
+            width: 160%;
+            
+        }
+    }
+    
+}
+
+/*FOOTER PREV */
+.footer_prev{ /*footer que quiero que desaparezca cuando aparece el footer principal*/
+    display: none ; /* LO DESAPAREZCO HASTA QUE SEPA COMO HACERLO */
+}
+
+/*FOOTER PRINC. */
+.footer_bottom{ /*contenedor del footer principal */
+    padding: 30px;
+}
+
+.footer_bottom_redes{ /*propiedades de los hipervinculos */
+    ul{
+        a{
+            padding: 30px;
+            font-size: 3.5rem;
+            color: $white;
+        }
+    }
+}
+
+.mail{
+    display: block;
+}
+
+
+.footer_bottom_logo{ /*logo principal de las redes */
+    img{
+        display: none; 
+    }
+}
+
+.footer_bottom_copyright { /* propiedades de la informacion legal */
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.footer_bottom_info {
+    a{
+        display: none;
+    }
+}
+
+/*GALERIA VISTA TABLET */
+
+.container_grid_gallery{
+    display: grid; 
+    grid-template-rows: repeat(3,1fr); /*defino las filas*/
+    grid-template-columns: repeat(3,1fr); /*defino las columnas*/
+    grid-template-areas:
+    "section_0 section_0 section_4"
+    "section_2 section_3 section_4"
+    "section_1 section_3 section_5"
+    ;
+    /*TENGO UN ESPACIO EN BLANCO ENTRE LA GRILLA Y EL FOOTER, ENCONTRAR ALGUNA SOLUCION */
+    gap: 10px;
+    height: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.more_insta{
+    display: none;
+}
+
+
+/*FORMULARIO VISTA TABLET */
+
+.main_form{
+    margin: 0;
+}
+        
+.form_container{ /*defino las propiedades del contenedor de todo el "main" */
+    margin-top: 92px;
+    margin-bottom: 92px;
+    justify-content: center;
+    width: 100%;    
+    height: 53vh;            
+}
+        
+.form_images{ /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
+    img{
+        &:first-of-type{
+            display: none; 
+        }
+    }
+
+}        
+        
+.form_images_2{ /*imagen del formulario, buscar una mejor manera de posicionar los elementos */
+    display: none;
+}        
+        
+.form_contacts{ /*defino las propiedades del contenedor del formulario" */
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/*LOCALIZACION RESPONSIVE MOBILE/TABLET */
+
+
+.location_travel_container{
+    display: grid; 
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-areas:
+    "section_1 section_1"
+    "section_0 section_0"
+    ;
+    margin: 10px;
+    
+}
+
+.travel {
+    grid-area: section_0 ;
+    ul{
+        height: 70%;
+        li{
+            margin: 10px;
+        }
+    }
+}
+
+
+.location_map_container{
+    grid-area: section_1;
+}
+
+
+.location_map_container{
+    div{
+        h2{
+            font-size: 3rem;
+        }
+    }
+    
+}
+    /*ABOUT US */
+
+
+    .info{
+        width: 80%;
+        transition: all 2s;
+        div{
+            h2{
+                margin-top: 50px;
+                margin-bottom: 50px; 
+            }
+            p{
+                margin-top: 30px;
+                margin-bottom: 30px; 
+                width: 100%; 
+            }
+            img{
+                margin-top: 0;
+            }
+        }
+    }
+
+    .images_info{
+       flex-direction: column;
+       
+   }
+   
+ 
+   .image_info_experience{
+        display: flex;
+        align-items: center;
+        margin: 20px;
+        
+       &:nth-of-type(1n){
+        flex-direction: row;
+        
+       }
+       &:nth-of-type(2n){
+        flex-direction: row-reverse;
+        float: left;
+       }
+       
+      
+       
+       img{
+           margin: 0;
+           margin-left: 10px;
+           margin-right: 10px;
+       }
+       p{
+            width: 50% !important;
+            
+       }
+   }
+   
+
+
+   .up {
+       img{
+       width: 50px;
+       }
+   }

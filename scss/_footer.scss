@@ -1,0 +1,70 @@
+
+.footer_bottom{ /*contenedor del footer principal */
+    border-top: 2px solid $colorborde;
+    border-bottom: 2px solid $colorborde;
+    background-color: $bgfooter;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    width: 100%;
+    
+    
+}
+
+.footer_bottom_redes{
+    ul{ /*propiedades del ul de las redes */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 0;
+    }
+    a{
+        padding: 40px;
+        font-size: 3rem;
+        color: $gray;
+        &:hover{
+            color: $white;
+        }
+    }
+
+}
+
+.mail{
+    display: none;
+}
+
+.footer_bottom_logo {
+    img{ /*logo principal de las redes */
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    }
+    
+}
+
+.footer_bottom_copyright { /* propiedades de la informacion legal */
+    margin-bottom:5px ;
+    font-size: 1.5rem;
+    color: $copywhite;
+    
+}
+
+.footer_bottom_info{
+    a{
+    text-decoration: underline;
+    color: whitesmoke;
+    font-size: 1.3rem;
+    }
+    &:first-of-type{
+        padding-right: 5px;
+        border-right: 2px solid $gray;
+    }
+
+}
+
+.footer_prev{ /*footer que quiero que desaparezca cuando aparece el footer principal*/
+    display: none ; /* LO DESAPAREZCO HASTA QUE SEPA COMO HACERLO */
+}

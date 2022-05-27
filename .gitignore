@@ -1,5 +1,4 @@
-/experience.html
-/stylesass.css
-node_modules
-sass
-scss
+pages/experience.html
+css/stylesass.css
+node_modules/
+sass/
