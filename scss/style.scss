@@ -168,7 +168,7 @@ html{
     @include header_images($header_img_contact);
 }
 
-.tittle{ 
+.title{ 
     padding: 80px;
     color: $white;
     text-transform: uppercase;
@@ -459,7 +459,7 @@ html{
 
 }
 
-#h2_tittle{
+#h2_title{
     font-size: 3.5rem;
     text-transform: uppercase;
     margin-top: 100px;
@@ -485,7 +485,7 @@ html{
             }
         }
         h2{
-            @extend #h2_tittle;
+            @extend #h2_title;
         }
         img{
             margin-top: 50px;   
@@ -574,14 +574,13 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
     justify-content: center;
 }
 
 .location{
     div{
         h2{
-        @extend #h2_tittle;
+        @extend #h2_title;
         }
     }
 }

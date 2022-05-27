@@ -273,7 +273,7 @@ html {
     background-blend-mode: darken;
     filter: grayscale(100%); }
 
-.tittle {
+.title {
   padding: 80px;
   color: white;
   text-transform: uppercase;
@@ -483,7 +483,7 @@ html {
   font-size: 1.6rem;
   font-weight: bold; }
 
-#h2_tittle, .info div h2, .location div h2 {
+#h2_title, .info div h2, .location div h2 {
   font-size: 3.5rem;
   text-transform: uppercase;
   margin-top: 100px;
